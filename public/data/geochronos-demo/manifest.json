@@ -1,0 +1,31 @@
+{
+  "name": "GeoChronos Chennai River Basin Investigation Dataset",
+  "version": "2.4.0",
+  "classification": "DEVELOPMENT_BENCHMARK_DETERMINISTIC",
+  "aoi": "Chennai Metropolitan Area, Tamil Nadu, India",
+  "center": [80.2385, 13.0195],
+  "bounds": [80.14, 12.95, 80.32, 13.12],
+  "crs": "EPSG:4326",
+  "temporalRange": {
+    "start": "2011-01-01",
+    "end": "2026-08-31",
+    "keyEpochs": [2011, 2015, 2020, 2024, 2026]
+  },
+  "datasets": {
+    "rivers": "/data/geochronos-demo/rivers.geojson",
+    "sites": "/data/geochronos-demo/sites.geojson",
+    "features": "/data/geochronos-demo/features.geojson",
+    "observations": "/data/geochronos-demo/observations.json",
+    "temporalStates": "/data/geochronos-demo/temporal_states.json",
+    "changeEvents": "/data/geochronos-demo/change_events.json",
+    "evidence": "/data/geochronos-demo/evidence.json",
+    "provenance": "/data/geochronos-demo/provenance.json"
+  },
+  "queryCapabilities": [
+    "Find newly constructed buildings near rivers",
+    "Find newly constructed buildings near rivers in Chennai",
+    "Show buildings that appeared between 2020 and 2026",
+    "Detect encroachments along Adyar river floodplain",
+    "Analyze temporal footprint expansion near Cooum river"
+  ]
+}

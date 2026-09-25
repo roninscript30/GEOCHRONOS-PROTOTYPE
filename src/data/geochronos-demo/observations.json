@@ -1,0 +1,67 @@
+[
+  {
+    "id": "obs-chn-2011",
+    "year": 2011,
+    "date": "2011-03-24",
+    "source": "Landsat-7 ETM+ / IRS-P6 LISS-IV",
+    "sensor": "ETM+ / LISS-IV",
+    "resolutionMeters": 15.0,
+    "cloudCover": 0.0,
+    "ndviMean": 0.38,
+    "ndbiMean": -0.14,
+    "waterLevelIndex": "Moderate (Dry Pre-Monsoon)",
+    "notes": "Historical baseline. Natural mudflats and mangrove scrub along Kotturpuram Adyar riverbank."
+  },
+  {
+    "id": "obs-chn-2015",
+    "year": 2015,
+    "date": "2015-12-10",
+    "source": "Sentinel-2A MSI / RISAT-1 SAR",
+    "sensor": "MSI / C-band SAR",
+    "resolutionMeters": 10.0,
+    "cloudCover": 8.4,
+    "ndviMean": 0.22,
+    "ndbiMean": -0.42,
+    "waterLevelIndex": "Extreme (Historic Chennai Flooding Event)",
+    "notes": "Post-historic flood inundation. Adyar floodplain completely inundated up to 220m from central flowline."
+  },
+  {
+    "id": "obs-chn-2020",
+    "year": 2020,
+    "date": "2020-01-15",
+    "source": "Sentinel-2B MSI Level-2A",
+    "sensor": "MSI Multi-Spectral (10m)",
+    "resolutionMeters": 10.0,
+    "cloudCover": 0.2,
+    "ndviMean": 0.31,
+    "ndbiMean": -0.08,
+    "waterLevelIndex": "Normal Flow Regime",
+    "notes": "Pre-construction baseline. High soil moisture, vacant open ground. Zero structural walls or impervious roofs."
+  },
+  {
+    "id": "obs-chn-2024",
+    "year": 2024,
+    "date": "2024-03-22",
+    "source": "Sentinel-2A MSI & Cartosat-3",
+    "sensor": "MSI / Cartosat PAN+MX",
+    "resolutionMeters": 10.0,
+    "cloudCover": 0.0,
+    "ndviMean": 0.09,
+    "ndbiMean": 0.44,
+    "waterLevelIndex": "Regulated Flow",
+    "notes": "Appearance event confirmed. High NIR/SWIR reflectance corresponding to reinforced concrete slab and metal deck roofing."
+  },
+  {
+    "id": "obs-chn-2026",
+    "year": 2026,
+    "date": "2026-08-14",
+    "source": "Sentinel-2B MSI Level-2A & PlanetScope",
+    "sensor": "MSI Level-2A",
+    "resolutionMeters": 10.0,
+    "cloudCover": 1.1,
+    "ndviMean": 0.08,
+    "ndbiMean": 0.46,
+    "waterLevelIndex": "Normal Flow",
+    "notes": "Current verified state. Fully occupied commercial complex. Digital boundary demarcated by CRRT survey."
+  }
+]

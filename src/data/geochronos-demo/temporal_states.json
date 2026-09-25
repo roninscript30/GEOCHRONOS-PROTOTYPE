@@ -1,0 +1,56 @@
+{
+  "siteAlpha": {
+    "siteId": "CHN-SITE-01",
+    "name": "Site Alpha — Kotturpuram Riverbank Complex",
+    "coordinates": [80.2385, 13.0195],
+    "riverProximityM": 125,
+    "river": "Adyar River",
+    "statesByYear": {
+      "2011": {
+        "status": "UNBUILT_NATURAL",
+        "description": "Natural mudflat and estuarine vegetation",
+        "surfaceType": "Soil / Grass / Mudflat",
+        "builtAreaSqm": 0,
+        "spectralNDBI": -0.14,
+        "spectralNDVI": 0.38,
+        "floodVulnerability": "High Natural Floodplain Storage"
+      },
+      "2015": {
+        "status": "FLOOD_SUBMERGED",
+        "description": "Submerged during 2015 extreme rainfall event",
+        "surfaceType": "Standing Inundation Water",
+        "builtAreaSqm": 0,
+        "spectralNDBI": -0.42,
+        "spectralNDVI": 0.22,
+        "floodVulnerability": "Submerged under 1.8m backwater"
+      },
+      "2020": {
+        "status": "VACANT_PARCEL",
+        "description": "Scrub clearing and preliminary boundary demarcation",
+        "surfaceType": "Compacted Soil / Low Scrub",
+        "builtAreaSqm": 0,
+        "spectralNDBI": -0.08,
+        "spectralNDVI": 0.31,
+        "floodVulnerability": "High Runoff Risk"
+      },
+      "2024": {
+        "status": "CONSTRUCTED_COMPLEX",
+        "description": "5-storey commercial complex fully erected (+3450 m²)",
+        "surfaceType": "Reinforced Concrete / Reflective Roof",
+        "builtAreaSqm": 3450,
+        "spectralNDBI": 0.44,
+        "spectralNDVI": 0.09,
+        "floodVulnerability": "Obstruction of Adyar HFL Buffer"
+      },
+      "2026": {
+        "status": "PERMANENT_DEMARCATED",
+        "description": "Operational commercial structure under WRD/CRRT review",
+        "surfaceType": "Paved Impervious Built Surface",
+        "builtAreaSqm": 3450,
+        "spectralNDBI": 0.46,
+        "spectralNDVI": 0.08,
+        "floodVulnerability": "Critical Flood Channel Encroachment"
+      }
+    }
+  }
+}

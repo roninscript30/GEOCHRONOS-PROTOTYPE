@@ -1,0 +1,90 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "river-adyar",
+      "properties": {
+        "name": "Adyar River",
+        "code": "CHN-RIV-ADY",
+        "avgWidthM": 140,
+        "class": "Major River Corridor",
+        "bufferM": 150,
+        "estuary": "Adyar Estuary (Bay of Bengal)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [80.155, 13.008],
+          [80.165, 13.011],
+          [80.174, 13.0142],
+          [80.1872, 13.0185],
+          [80.198, 13.021],
+          [80.203, 13.022],
+          [80.211, 13.0205],
+          [80.218, 13.018],
+          [80.228, 13.0175],
+          [80.2385, 13.0195],
+          [80.248, 13.015],
+          [80.255, 13.008],
+          [80.267, 13.007],
+          [80.2769, 13.0128]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "river-cooum",
+      "properties": {
+        "name": "Cooum River",
+        "code": "CHN-RIV-COO",
+        "avgWidthM": 85,
+        "class": "Urban River Corridor",
+        "bufferM": 100,
+        "estuary": "Napier Bridge / Marina Beach"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [80.168, 13.048],
+          [80.1801, 13.0556],
+          [80.192, 13.062],
+          [80.2, 13.0667],
+          [80.215, 13.069],
+          [80.2278, 13.0707],
+          [80.235, 13.072],
+          [80.248, 13.074],
+          [80.26, 13.076],
+          [80.273, 13.073],
+          [80.2845, 13.0688]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "canal-buckingham",
+      "properties": {
+        "name": "Buckingham Canal",
+        "code": "CHN-CNL-BKC",
+        "avgWidthM": 35,
+        "class": "Drainage/Tidal Canal",
+        "bufferM": 50,
+        "estuary": "Interconnecting Coastal System"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [80.28, 13.075],
+          [80.275, 13.06],
+          [80.268, 13.045],
+          [80.262, 13.025],
+          [80.258, 13.01],
+          [80.2527, 12.9848],
+          [80.248, 12.96],
+          [80.245, 12.935],
+          [80.235, 12.898]
+        ]
+      }
+    }
+  ]
+}

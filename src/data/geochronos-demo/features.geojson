@@ -1,0 +1,197 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "id": "bldg-chn-001",
+        "featureId": "CHN-ADY-2024-001",
+        "name": "Site Alpha — Kotturpuram Riverbank Commercial Complex",
+        "locality": "Kotturpuram",
+        "river": "Adyar River",
+        "proximity_river_m": 125,
+        "area_sqm": 3450,
+        "floors": 5,
+        "height": 17.5,
+        "status": "candidate",
+        "score": 0.96,
+        "zoning": "River Floodplain Zone",
+        "riskLevel": "CRITICAL_ENCROACHMENT",
+        "firstObserved": "2022-04-18"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.237, 13.0185],
+            [80.24, 13.0185],
+            [80.24, 13.0205],
+            [80.237, 13.0205],
+            [80.237, 13.0185]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "properties": {
+        "id": "bldg-chn-002",
+        "featureId": "CHN-ADY-2024-002",
+        "name": "Site Beta — Nandambakkam Trade Depot",
+        "locality": "Nandambakkam",
+        "river": "Adyar River",
+        "proximity_river_m": 170,
+        "area_sqm": 4800,
+        "floors": 3,
+        "height": 11.0,
+        "status": "candidate",
+        "score": 0.91,
+        "zoning": "Commercial/Industrial",
+        "riskLevel": "BUFFER_PERIPHERY",
+        "firstObserved": "2022-11-04"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.1855, 13.0175],
+            [80.189, 13.0175],
+            [80.189, 13.0195],
+            [80.1855, 13.0195],
+            [80.1855, 13.0175]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "properties": {
+        "id": "bldg-chn-003",
+        "featureId": "CHN-ADY-2024-003",
+        "name": "Site Gamma — Manapakkam Tech Park Wing",
+        "locality": "Manapakkam",
+        "river": "Adyar River",
+        "proximity_river_m": 210,
+        "area_sqm": 6200,
+        "floors": 7,
+        "height": 24.5,
+        "status": "candidate",
+        "score": 0.85,
+        "zoning": "IT Park Zone",
+        "riskLevel": "ELEVATED_RUNOFF",
+        "firstObserved": "2023-02-12"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.172, 13.013],
+            [80.176, 13.013],
+            [80.176, 13.0155],
+            [80.172, 13.0155],
+            [80.172, 13.013]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "properties": {
+        "id": "bldg-chn-004",
+        "featureId": "CHN-ADY-2024-004",
+        "name": "Site Delta — Saidapet West Mixed Block",
+        "locality": "Saidapet West",
+        "river": "Adyar River",
+        "proximity_river_m": 90,
+        "area_sqm": 2150,
+        "floors": 4,
+        "height": 14.0,
+        "status": "candidate",
+        "score": 0.82,
+        "zoning": "High Density Residential",
+        "riskLevel": "CRITICAL_ENCROACHMENT",
+        "firstObserved": "2023-08-30"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.2165, 13.017],
+            [80.2195, 13.017],
+            [80.2195, 13.019],
+            [80.2165, 13.019],
+            [80.2165, 13.017]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "properties": {
+        "id": "bldg-chn-005",
+        "featureId": "CHN-COO-2024-005",
+        "name": "Site Epsilon — Koyambedu Storage Hub",
+        "locality": "Koyambedu",
+        "river": "Cooum River",
+        "proximity_river_m": 115,
+        "area_sqm": 5100,
+        "floors": 2,
+        "height": 8.0,
+        "status": "candidate",
+        "score": 0.78,
+        "zoning": "Commercial Storage",
+        "riskLevel": "BUFFER_VIOLATION",
+        "firstObserved": "2022-09-14"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.1985, 13.0655],
+            [80.2015, 13.0655],
+            [80.2015, 13.068],
+            [80.1985, 13.068],
+            [80.1985, 13.0655]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "properties": {
+        "id": "bldg-chn-006",
+        "featureId": "CHN-COO-2024-006",
+        "name": "Site Zeta — Aminjikarai Commercial Cluster",
+        "locality": "Aminjikarai",
+        "river": "Cooum River",
+        "proximity_river_m": 75,
+        "area_sqm": 1950,
+        "floors": 4,
+        "height": 14.5,
+        "status": "candidate",
+        "score": 0.74,
+        "zoning": "Mixed Use Commercial",
+        "riskLevel": "SEVERE_ENCROACHMENT",
+        "firstObserved": "2023-01-20"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.2265, 13.0698],
+            [80.229, 13.0698],
+            [80.229, 13.0715],
+            [80.2265, 13.0715],
+            [80.2265, 13.0698]
+          ]
+        ]
+      }
+    }
+  ]
+}

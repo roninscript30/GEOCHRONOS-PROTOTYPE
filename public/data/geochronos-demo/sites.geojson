@@ -1,0 +1,113 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "site-alpha",
+      "properties": {
+        "siteId": "CHN-SITE-01",
+        "name": "Site Alpha — Kotturpuram Riverbank Complex",
+        "locality": "Kotturpuram, Chennai",
+        "river": "Adyar River",
+        "proximity_river_m": 125,
+        "priority": 1,
+        "status": "confirmed_change",
+        "score": 0.96
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2385, 13.0195]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-beta",
+      "properties": {
+        "siteId": "CHN-SITE-02",
+        "name": "Site Beta — Nandambakkam Trade Depot",
+        "locality": "Nandambakkam, Chennai",
+        "river": "Adyar River",
+        "proximity_river_m": 170,
+        "priority": 2,
+        "status": "candidate_change",
+        "score": 0.91
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.1872, 13.0185]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-gamma",
+      "properties": {
+        "siteId": "CHN-SITE-03",
+        "name": "Site Gamma — Manapakkam Tech Park Wing",
+        "locality": "Manapakkam, Chennai",
+        "river": "Adyar River",
+        "proximity_river_m": 210,
+        "priority": 3,
+        "status": "candidate_change",
+        "score": 0.85
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.174, 13.0142]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-delta",
+      "properties": {
+        "siteId": "CHN-SITE-04",
+        "name": "Site Delta — Saidapet West Mixed Block",
+        "locality": "Saidapet West, Chennai",
+        "river": "Adyar River",
+        "proximity_river_m": 90,
+        "priority": 4,
+        "status": "candidate_change",
+        "score": 0.82
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.218, 13.018]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-epsilon",
+      "properties": {
+        "siteId": "CHN-SITE-05",
+        "name": "Site Epsilon — Koyambedu Storage Hub",
+        "locality": "Koyambedu, Chennai",
+        "river": "Cooum River",
+        "proximity_river_m": 115,
+        "priority": 5,
+        "status": "candidate_change",
+        "score": 0.78
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2, 13.0667]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "site-zeta",
+      "properties": {
+        "siteId": "CHN-SITE-06",
+        "name": "Site Zeta — Aminjikarai Commercial Cluster",
+        "locality": "Aminjikarai, Chennai",
+        "river": "Cooum River",
+        "proximity_river_m": 75,
+        "priority": 6,
+        "status": "candidate_change",
+        "score": 0.74
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2278, 13.0707]
+      }
+    }
+  ]
+}

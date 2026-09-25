@@ -1,0 +1,54 @@
+{
+  "provenanceTree": [
+    {
+      "id": "prov-node-1",
+      "type": "finding",
+      "label": "Finding: Floodplain Building Appearance Event",
+      "detail": "New 3,450 m² commercial complex constructed in Adyar River 150m buffer corridor (Kotturpuram, Chennai)",
+      "confidence": "0.96",
+      "timestamp": "2024-03-22"
+    },
+    {
+      "id": "prov-node-2",
+      "type": "feature",
+      "label": "Cadastral Feature CHN-ADY-2024-001",
+      "detail": "Polygon footprint: [80.237, 13.0185] to [80.240, 13.0205], 5 floors (17.5m height)",
+      "parent": "prov-node-1"
+    },
+    {
+      "id": "prov-node-3",
+      "type": "observation",
+      "label": "Observation Pair (2020-01-15 ↔ 2024-03-22)",
+      "detail": "Sentinel-2 MSI Orthorectified Bottom-Of-Atmosphere (L2A) reflectance",
+      "parent": "prov-node-2"
+    },
+    {
+      "id": "prov-node-4",
+      "type": "stac_item",
+      "label": "STAC Item: S2A_MSIL2A_20240322T044701_N0510_R119_T44PMV",
+      "detail": "Tile 44PMV (Chennai Metropolitan), Sun Azimuth: 118.4°, Cloud: 0.00%",
+      "parent": "prov-node-3"
+    },
+    {
+      "id": "prov-node-5",
+      "type": "source",
+      "label": "Sensor: Copernicus Sentinel-2A / ISRO Cartosat-3",
+      "detail": "MultiSpectral Instrument (B2, B3, B4, B8 at 10m GSD) & Cartosat-3 0.28m PAN",
+      "parent": "prov-node-4"
+    },
+    {
+      "id": "prov-node-6",
+      "type": "zarr_coordinate",
+      "label": "Zarr Datacube Slice: t='2024-03-22T04:47:01Z'",
+      "detail": "Chennai_Rivers_Cube.zarr / time_index: 384, spatial_chunk: [44, 21]",
+      "parent": "prov-node-5"
+    },
+    {
+      "id": "prov-node-7",
+      "type": "spatial_slice",
+      "label": "Adyar Estuarine Spatial Slice: [80.230:80.245, 13.015:13.025]",
+      "detail": "150m river buffer query intersection over Adyar hydraulic boundary model",
+      "parent": "prov-node-6"
+    }
+  ]
+}

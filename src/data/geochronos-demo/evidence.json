@@ -1,0 +1,45 @@
+{
+  "chg-chn-001": {
+    "id": "ev-chn-001",
+    "changeEventId": "chg-chn-001",
+    "targetSite": "Site Alpha — Kotturpuram Riverbank Commercial Complex",
+    "location": {
+      "latitude": 13.0195,
+      "longitude": 80.2385,
+      "locality": "Kotturpuram, Chennai",
+      "distanceToAdyarRiverM": 125
+    },
+    "epochBefore": {
+      "date": "2020-01-15",
+      "sensor": "Sentinel-2B MSI (Level-2A BOA)",
+      "tile": "T44PMV",
+      "sunAzimuth": "134.2°",
+      "sunElevation": "44.8°",
+      "cloudCover": "0.2%",
+      "description": "Vacant Floodplain Parcel (Compacted Soil/Scrub)"
+    },
+    "epochAfter": {
+      "date": "2024-03-22",
+      "sensor": "Sentinel-2A MSI & Cartosat-3",
+      "tile": "T44PMV",
+      "sunAzimuth": "118.4°",
+      "sunElevation": "58.1°",
+      "cloudCover": "0.0%",
+      "description": "5-Storey Commercial Complex (+3450 m² Built Footprint)"
+    },
+    "interval": "4 years 2 months (April 2020 – March 2024)",
+    "changeType": "Building Appearance (+3450 m²)",
+    "confidenceScore": 0.96,
+    "confidenceDerivation": [
+      "Multi-temporal geometric IoU: 0.94",
+      "SAR C-band double-bounce signature: +14.2 dB",
+      "Normalized Difference Built-Up Index (NDBI) shift: -0.08 to +0.44",
+      "Ground Control Point alignment residual: 0.18 pixels"
+    ],
+    "environmentalContext": {
+      "basin": "Adyar River Basin (Chennai)",
+      "bufferViolation": "Inside 150m High Flood Level (HFL) statutory buffer",
+      "cycloneVulnerability": "Displaced 60,375 m³ natural flood retention volume during Cyclone Michaung equivalent events"
+    }
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "bldg-chn-001": {
+    "siteId": "bldg-chn-001",
+    "name": "Site Alpha — Kotturpuram Riverbank Commercial Complex",
+    "coordinates": [
+      80.237,
+      13.0185
+    ],
+    "river": "Adyar River",
+    "riverProximityM": 125,
+    "statesByYear": {
+      "2020": {
+        "status": "vacant_riparian",
+        "description": "Undisturbed natural riparian flood plain vegetation.",
+        "surfaceType": "riparian_vegetation",
+        "builtAreaSqm": 0,
+        "spectralNDBI": -0.22,
+        "spectralNDVI": 0.54,
+        "floodVulnerability": "EXTREME"
+      },
+      "2022": {
+        "status": "foundation_work",
+        "description": "Deep piling and basement slab construction underway.",
+        "surfaceType": "concrete_basement",
+        "builtAreaSqm": 1800,
+        "spectralNDBI": 0.35,
+        "spectralNDVI": 0.18,
+        "floodVulnerability": "EXTREME"
+      },
+      "2024": {
+        "status": "completed_complex",
+        "description": "Multi-story commercial complex fully occupied.",
+        "surfaceType": "reinforced_concrete",
+        "builtAreaSqm": 3450,
+        "spectralNDBI": 0.62,
+        "spectralNDVI": 0.08,
+        "floodVulnerability": "CRITICAL"
+      },
+      "2026": {
+        "status": "operational_commercial",
+        "description": "Persistent commercial footprint with paved access roads.",
+        "surfaceType": "reinforced_concrete",
+        "builtAreaSqm": 3450,
+        "spectralNDBI": 0.64,
+        "spectralNDVI": 0.07,
+        "floodVulnerability": "CRITICAL"
+      }
+    }
+  },
+  "rd-spb-001": {
+    "siteId": "rd-spb-001",
+    "name": "Site R-01 — Sriperumbudur Highway Logistics Interchange",
+    "coordinates": [
+      79.945,
+      12.975
+    ],
+    "river": "National Highway NH-48 Corridor",
+    "riverProximityM": 0,
+    "statesByYear": {
+      "2020": {
+        "status": "rural_fallow",
+        "description": "Agricultural fallow parcel along two-lane road alignment.",
+        "surfaceType": "soil_vegetation",
+        "builtAreaSqm": 0,
+        "spectralNDBI": -0.18,
+        "spectralNDVI": 0.46,
+        "floodVulnerability": "LOW"
+      },
+      "2022": {
+        "status": "embankment_earthworks",
+        "description": "Sub-base soil compaction, heavy earthworks, corridor grading.",
+        "surfaceType": "cleared_graded_gravel",
+        "builtAreaSqm": 3100,
+        "spectralNDBI": 0.22,
+        "spectralNDVI": 0.14,
+        "floodVulnerability": "LOW"
+      },
+      "2024": {
+        "status": "asphalt_surfaced",
+        "description": "Dual-carriageway bitumen paving completed with bridge interchange.",
+        "surfaceType": "bituminous_asphalt_concrete",
+        "builtAreaSqm": 8400,
+        "spectralNDBI": 0.61,
+        "spectralNDVI": 0.08,
+        "floodVulnerability": "LOW"
+      },
+      "2026": {
+        "status": "operational_arterial",
+        "description": "High-speed operational expressway corridor with automated tolling.",
+        "surfaceType": "dense_impervious_transport",
+        "builtAreaSqm": 8400,
+        "spectralNDBI": 0.63,
+        "spectralNDVI": 0.07,
+        "floodVulnerability": "LOW"
+      }
+    }
+  },
+  "dm-plk-001": {
+    "siteId": "dm-plk-001",
+    "name": "Site D-01 — Pallikaranai Marsh Wetland Restoration Parcel",
+    "coordinates": [
+      80.218,
+      12.935
+    ],
+    "river": "Pallikaranai Water Basin",
+    "riverProximityM": 10,
+    "statesByYear": {
+      "2020": {
+        "status": "unauthorized_masonry",
+        "description": "Active unauthorized commercial sheds and scrap yards encroaching wetland.",
+        "surfaceType": "masonry_sheet_metal",
+        "builtAreaSqm": 4200,
+        "spectralNDBI": 0.52,
+        "spectralNDVI": 0.08,
+        "floodVulnerability": "EXTREME"
+      },
+      "2022": {
+        "status": "demolition_notice",
+        "description": "Eviction order executed by Revenue Dept. Perimeter fencing demolished.",
+        "surfaceType": "demolition_rubble",
+        "builtAreaSqm": 1900,
+        "spectralNDBI": 0.24,
+        "spectralNDVI": 0.16,
+        "floodVulnerability": "HIGH"
+      },
+      "2024": {
+        "status": "completely_cleared",
+        "description": "Structures completely razed, debris removed, native marsh grasses planted.",
+        "surfaceType": "wetland_reed_grass",
+        "builtAreaSqm": 0,
+        "spectralNDBI": -0.38,
+        "spectralNDVI": 0.62,
+        "floodVulnerability": "RESTORED"
+      },
+      "2026": {
+        "status": "natural_marsh_regrowth",
+        "description": "Fully restored wetland sanctuary with deep open water retention pools.",
+        "surfaceType": "perennial_water_reeds",
+        "builtAreaSqm": 0,
+        "spectralNDBI": -0.42,
+        "spectralNDVI": 0.68,
+        "floodVulnerability": "SAFE_CONSERVATION"
+      }
+    }
+  },
+  "gw-org-001": {
+    "siteId": "gw-org-001",
+    "name": "Site G-01 — Oragadam Auto Corridor Megafactory Wing",
+    "coordinates": [
+      79.925,
+      12.835
+    ],
+    "river": "Industrial Belt Basin",
+    "riverProximityM": 350,
+    "statesByYear": {
+      "2020": {
+        "status": "vacant_graded_plot",
+        "description": "Zoned industrial plot with graded gravel subgrade and boundary trenching.",
+        "surfaceType": "bare_gravel",
+        "builtAreaSqm": 0,
+        "spectralNDBI": 0.08,
+        "spectralNDVI": 0.22,
+        "floodVulnerability": "LOW"
+      },
+      "2022": {
+        "status": "steel_frame_erection",
+        "description": "Erection of pre-engineered structural steel frames and perimeter retaining walls.",
+        "surfaceType": "structural_steel_foundation",
+        "builtAreaSqm": 5400,
+        "spectralNDBI": 0.36,
+        "spectralNDVI": 0.11,
+        "floodVulnerability": "LOW"
+      },
+      "2024": {
+        "status": "fully_enclosed_plant",
+        "description": "Fully roofed assembly bay with rooftop solar installation and concrete loading bays.",
+        "surfaceType": "galvanized_steel_roofing",
+        "builtAreaSqm": 12500,
+        "spectralNDBI": 0.64,
+        "spectralNDVI": 0.05,
+        "floodVulnerability": "LOW"
+      },
+      "2026": {
+        "status": "operational_logistics_hub",
+        "description": "High-density operational logistics complex with continuous automated dispatch.",
+        "surfaceType": "dense_industrial_roofing",
+        "builtAreaSqm": 12500,
+        "spectralNDBI": 0.65,
+        "spectralNDVI": 0.04,
+        "floodVulnerability": "LOW"
+      }
+    }
+  },
+  "ct-mdu-001": {
+    "siteId": "ct-mdu-001",
+    "name": "Site M-01 — Madurai Vaigai Riverbank Commercial Encroachment",
+    "coordinates": [
+      78.1198,
+      9.9252
+    ],
+    "river": "Vaigai River",
+    "riverProximityM": 65,
+    "statesByYear": {
+      "2020": {
+        "status": "riparian_scrub",
+        "description": "Natural Vaigai riverbank riparian scrubland.",
+        "surfaceType": "riparian_scrub",
+        "builtAreaSqm": 0,
+        "spectralNDBI": -0.15,
+        "spectralNDVI": 0.48,
+        "floodVulnerability": "HIGH"
+      },
+      "2024": {
+        "status": "built_commercial",
+        "description": "Commercial vehicle depot and masonry office building.",
+        "surfaceType": "masonry_concrete",
+        "builtAreaSqm": 3800,
+        "spectralNDBI": 0.58,
+        "spectralNDVI": 0.09,
+        "floodVulnerability": "CRITICAL"
+      }
+    }
+  },
+  "ct-cbe-001": {
+    "siteId": "ct-cbe-001",
+    "name": "Site C-01 — Coimbatore Avinashi Road Tech Corridor Wing",
+    "coordinates": [
+      76.9558,
+      11.0168
+    ],
+    "river": "Noyyal River Basin",
+    "riverProximityM": 220,
+    "statesByYear": {
+      "2020": {
+        "status": "agricultural_plot",
+        "description": "Open agricultural field along Avinashi arterial corridor.",
+        "surfaceType": "agricultural_soil",
+        "builtAreaSqm": 0,
+        "spectralNDBI": -0.05,
+        "spectralNDVI": 0.38,
+        "floodVulnerability": "LOW"
+      },
+      "2024": {
+        "status": "tech_park_tower",
+        "description": "Five-story glass and concrete IT park tower with structured parking.",
+        "surfaceType": "glass_concrete_roof",
+        "builtAreaSqm": 7200,
+        "spectralNDBI": 0.62,
+        "spectralNDVI": 0.07,
+        "floodVulnerability": "LOW"
+      }
+    }
+  },
+  "ct-kpm-001": {
+    "siteId": "ct-kpm-001",
+    "name": "Site K-01 — Kancheepuram Vegavathi River Floodplain Complex",
+    "coordinates": [
+      79.7036,
+      12.8342
+    ],
+    "river": "Vegavathi River",
+    "riverProximityM": 80,
+    "statesByYear": {
+      "2020": {
+        "status": "wetland_edge",
+        "description": "Natural Vegavathi floodplain retention marsh.",
+        "surfaceType": "wetland_vegetation",
+        "builtAreaSqm": 0,
+        "spectralNDBI": -0.21,
+        "spectralNDVI": 0.55,
+        "floodVulnerability": "HIGH"
+      },
+      "2024": {
+        "status": "textile_depot",
+        "description": "Three-story silk trade warehouse and parking apron.",
+        "surfaceType": "concrete_asphalt",
+        "builtAreaSqm": 3100,
+        "spectralNDBI": 0.55,
+        "spectralNDVI": 0.12,
+        "floodVulnerability": "CRITICAL"
+      }
+    }
+  }
+}

@@ -1,0 +1,519 @@
+{
+  "metadata": {
+    "region": "Chennai Metropolitan Area, Tamil Nadu, India",
+    "investigationObjective": "Multi-temporal satellite detection of newly constructed buildings and encroachments within the Adyar and Cooum river floodplain corridors (2011–2026)",
+    "crs": "EPSG:4326",
+    "center": [80.2385, 13.0195],
+    "defaultZoom": 13.2,
+    "siteZoom": 16.5,
+    "boundingBox": {
+      "southWest": [80.14, 12.95],
+      "northEast": [80.32, 13.12]
+    },
+    "riversMonitored": [
+      {
+        "name": "Adyar River",
+        "lengthKm": 42.5,
+        "estuary": "Adyar Estuary (Bay of Bengal)",
+        "regulatoryBufferMeters": 150
+      },
+      {
+        "name": "Cooum River",
+        "lengthKm": 72.0,
+        "estuary": "Napier Bridge / Marina Beach",
+        "regulatoryBufferMeters": 100
+      },
+      {
+        "name": "Buckingham Canal",
+        "lengthKm": 31.0,
+        "estuary": "Interconnecting Coastal Canal",
+        "regulatoryBufferMeters": 50
+      }
+    ],
+    "authoritativeSources": [
+      "Copernicus Sentinel-2 MSI (Level-2A Surface Reflectance)",
+      "USGS / NASA Landsat 8-9 OLI/TIRS",
+      "ISRO Cartosat-3 High Resolution Panchromatic / Multispectral",
+      "Tamil Nadu Water Resources Department (WRD) DGPS River Demarcation",
+      "Chennai River Restoration Trust (CRRT) Eco-restoration Cadastral Survey"
+    ]
+  },
+  "satelliteBasemap": {
+    "type": "raster",
+    "tiles": [
+      "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+    ],
+    "tileSize": 256,
+    "maxzoom": 19,
+    "attribution": "Esri, Maxar, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community"
+  },
+  "riversGeoJSON": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "river-adyar",
+        "properties": {
+          "name": "Adyar River",
+          "code": "CHN-RIV-ADY",
+          "avgWidthM": 140,
+          "class": "Major River Corridor",
+          "flowDirection": "West to East"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [80.155, 13.008],
+            [80.165, 13.011],
+            [80.174, 13.0142],
+            [80.1872, 13.0185],
+            [80.198, 13.021],
+            [80.203, 13.022],
+            [80.211, 13.0205],
+            [80.218, 13.018],
+            [80.228, 13.0175],
+            [80.2385, 13.0195],
+            [80.248, 13.015],
+            [80.255, 13.008],
+            [80.267, 13.007],
+            [80.2769, 13.0128]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "river-cooum",
+        "properties": {
+          "name": "Cooum River",
+          "code": "CHN-RIV-COO",
+          "avgWidthM": 85,
+          "class": "Urban River Corridor",
+          "flowDirection": "West to East"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [80.168, 13.048],
+            [80.1801, 13.0556],
+            [80.192, 13.062],
+            [80.2, 13.0667],
+            [80.215, 13.069],
+            [80.2278, 13.0707],
+            [80.235, 13.072],
+            [80.248, 13.074],
+            [80.26, 13.076],
+            [80.273, 13.073],
+            [80.2845, 13.0688]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "canal-buckingham",
+        "properties": {
+          "name": "Buckingham Canal",
+          "code": "CHN-CNL-BKC",
+          "avgWidthM": 35,
+          "class": "Navigational/Drainage Canal",
+          "flowDirection": "North to South"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [80.28, 13.075],
+            [80.275, 13.06],
+            [80.268, 13.045],
+            [80.262, 13.025],
+            [80.258, 13.01],
+            [80.2527, 12.9848],
+            [80.248, 12.96],
+            [80.245, 12.935],
+            [80.235, 12.898]
+          ]
+        }
+      }
+    ]
+  },
+  "detectedCandidateBuildings": [
+    {
+      "id": "bldg-chn-001",
+      "featureId": "CHN-ADY-2024-001",
+      "name": "Site Alpha — Kotturpuram Riverbank Commercial Complex",
+      "coordinates": [80.2385, 13.0195],
+      "score": 0.96,
+      "status": "candidate",
+      "properties": {
+        "locality": "Kotturpuram / Chitra Nagar",
+        "river": "Adyar River",
+        "proximity_river_m": 125,
+        "area_sqm": 3450,
+        "floors_estimated": 5,
+        "height_m": 17.5,
+        "construction_phase": "Completed Structure",
+        "first_observed": "2022-04-18",
+        "baseline_absent": "2020-01-10",
+        "zoning": "CRZ-III / River Floodplain Buffer",
+        "risk_level": "CRITICAL_ENCROACHMENT"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.237, 13.0185],
+            [80.24, 13.0185],
+            [80.24, 13.0205],
+            [80.237, 13.0205],
+            [80.237, 13.0185]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bldg-chn-002",
+      "featureId": "CHN-ADY-2024-002",
+      "name": "Site Beta — Nandambakkam Logistics & Trade Depot",
+      "coordinates": [80.1872, 13.0185],
+      "score": 0.91,
+      "status": "candidate",
+      "properties": {
+        "locality": "Nandambakkam",
+        "river": "Adyar River",
+        "proximity_river_m": 170,
+        "area_sqm": 4800,
+        "floors_estimated": 3,
+        "height_m": 11.0,
+        "construction_phase": "Operational",
+        "first_observed": "2022-11-04",
+        "baseline_absent": "2020-01-10",
+        "zoning": "Industrial / Commercial",
+        "risk_level": "BUFFER_PERIPHERY"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.1855, 13.0175],
+            [80.189, 13.0175],
+            [80.189, 13.0195],
+            [80.1855, 13.0195],
+            [80.1855, 13.0175]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bldg-chn-003",
+      "featureId": "CHN-ADY-2024-003",
+      "name": "Site Gamma — Manapakkam Floodplain Tech Park Wing",
+      "coordinates": [80.174, 13.0142],
+      "score": 0.85,
+      "status": "candidate",
+      "properties": {
+        "locality": "Manapakkam Riverfront",
+        "river": "Adyar River",
+        "proximity_river_m": 210,
+        "area_sqm": 6200,
+        "floors_estimated": 7,
+        "height_m": 24.5,
+        "construction_phase": "Late Fitout",
+        "first_observed": "2023-02-12",
+        "baseline_absent": "2020-01-10",
+        "zoning": "Special IT Park Zone",
+        "risk_level": "ELEVATED_RUNOFF"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.172, 13.013],
+            [80.176, 13.013],
+            [80.176, 13.0155],
+            [80.172, 13.0155],
+            [80.172, 13.013]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bldg-chn-004",
+      "featureId": "CHN-ADY-2024-004",
+      "name": "Site Delta — Saidapet West Riverside Residential Block",
+      "coordinates": [80.218, 13.018],
+      "score": 0.82,
+      "status": "candidate",
+      "properties": {
+        "locality": "Saidapet West / Maraimalai Adigal Bridge North",
+        "river": "Adyar River",
+        "proximity_river_m": 90,
+        "area_sqm": 2150,
+        "floors_estimated": 4,
+        "height_m": 14.0,
+        "construction_phase": "Exterior Finished",
+        "first_observed": "2023-08-30",
+        "baseline_absent": "2020-01-10",
+        "zoning": "High Density Residential",
+        "risk_level": "CRITICAL_ENCROACHMENT"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.2165, 13.017],
+            [80.2195, 13.017],
+            [80.2195, 13.019],
+            [80.2165, 13.019],
+            [80.2165, 13.017]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bldg-chn-005",
+      "featureId": "CHN-COO-2024-005",
+      "name": "Site Epsilon — Koyambedu Cooum Riverfront Storage Hub",
+      "coordinates": [80.2, 13.0667],
+      "score": 0.78,
+      "status": "candidate",
+      "properties": {
+        "locality": "Koyambedu Wholesale Vicinity",
+        "river": "Cooum River",
+        "proximity_river_m": 115,
+        "area_sqm": 5100,
+        "floors_estimated": 2,
+        "height_m": 8.0,
+        "construction_phase": "Operational",
+        "first_observed": "2022-09-14",
+        "baseline_absent": "2020-01-10",
+        "zoning": "Commercial Storage",
+        "risk_level": "BUFFER_VIOLATION"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.1985, 13.0655],
+            [80.2015, 13.0655],
+            [80.2015, 13.068],
+            [80.1985, 13.068],
+            [80.1985, 13.0655]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bldg-chn-006",
+      "featureId": "CHN-COO-2024-006",
+      "name": "Site Zeta — Aminjikarai Cooum Commercial Cluster",
+      "coordinates": [80.2278, 13.0707],
+      "score": 0.74,
+      "status": "candidate",
+      "properties": {
+        "locality": "Aminjikarai / Poonamallee High Road Bridge",
+        "river": "Cooum River",
+        "proximity_river_m": 75,
+        "area_sqm": 1950,
+        "floors_estimated": 4,
+        "height_m": 14.5,
+        "construction_phase": "Occupied",
+        "first_observed": "2023-01-20",
+        "baseline_absent": "2020-01-10",
+        "zoning": "Mixed Use Commercial",
+        "risk_level": "SEVERE_ENCROACHMENT"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.2265, 13.0698],
+            [80.229, 13.0698],
+            [80.229, 13.0715],
+            [80.2265, 13.0715],
+            [80.2265, 13.0698]
+          ]
+        ]
+      }
+    }
+  ],
+  "temporalObservationsChennai": [
+    {
+      "id": "obs-chn-2011",
+      "year": 2011,
+      "date": "2011-03-24",
+      "source": "Landsat-7 ETM+ / IRS-P6 LISS-IV",
+      "sensor": "ETM+ / LISS-IV",
+      "groundSamplingDistanceM": 15.0,
+      "cloudCoverPct": 0.0,
+      "hasFeature": false,
+      "notes": "Pre-expansion baseline. Natural mudflats and seasonal marsh vegetation along Kotturpuram Adyar riverbank."
+    },
+    {
+      "id": "obs-chn-2015",
+      "year": 2015,
+      "date": "2015-12-10",
+      "source": "Sentinel-2A MSI / RISAT-1 SAR",
+      "sensor": "MSI Multi-Spectral / C-band SAR",
+      "groundSamplingDistanceM": 10.0,
+      "cloudCoverPct": 8.4,
+      "hasFeature": false,
+      "notes": "Post-historic Chennai floods observation. Extensive flood inundation recorded across the entire Adyar flood basin."
+    },
+    {
+      "id": "obs-chn-2020",
+      "year": 2020,
+      "date": "2020-01-15",
+      "source": "Sentinel-2B MSI Level-2A",
+      "sensor": "MSI (10m B2, B3, B4, B8)",
+      "groundSamplingDistanceM": 10.0,
+      "cloudCoverPct": 0.2,
+      "hasFeature": false,
+      "notes": "Verified pre-construction baseline. Target parcel shows open ground with sparse scrub cover. No building footprint."
+    },
+    {
+      "id": "obs-chn-2024",
+      "year": 2024,
+      "date": "2024-03-22",
+      "source": "Sentinel-2A MSI Level-2A & Cartosat-3",
+      "sensor": "MSI / Cartosat PAN+MX",
+      "groundSamplingDistanceM": 10.0,
+      "cloudCoverPct": 0.0,
+      "hasFeature": true,
+      "notes": "High spectral reflectance in NIR/SWIR confirming finished concrete/roofing surface. Footprint area 3450 m² fully formed."
+    },
+    {
+      "id": "obs-chn-2026",
+      "year": 2026,
+      "date": "2026-08-14",
+      "source": "Sentinel-2B MSI Level-2A & PlanetScope",
+      "sensor": "MSI Level-2A",
+      "groundSamplingDistanceM": 10.0,
+      "cloudCoverPct": 1.2,
+      "hasFeature": true,
+      "notes": "Current verified state. Structure permanently anchored and populated. Demarcated under CRRT digital flood buffer survey."
+    }
+  ],
+  "primaryChangeEvent": {
+    "id": "chg-chn-001",
+    "type": "appearance",
+    "targetSite": "Site Alpha — Kotturpuram Riverbank Commercial Complex",
+    "location": {
+      "latitude": 13.0195,
+      "longitude": 80.2385,
+      "locality": "Kotturpuram, Chennai"
+    },
+    "riverProximityMeters": 125,
+    "nearestRiver": "Adyar River",
+    "beforeObservation": {
+      "id": "obs-chn-2020",
+      "year": 2020,
+      "date": "2020-01-15",
+      "featurePresent": false,
+      "state": "Vacant Floodplain Scrub"
+    },
+    "afterObservation": {
+      "id": "obs-chn-2024",
+      "year": 2024,
+      "date": "2024-03-22",
+      "featurePresent": true,
+      "state": "Constructed Commercial Complex"
+    },
+    "confidence": 0.96,
+    "extent": {
+      "area": 3450,
+      "unit": "sqm",
+      "estimatedVolumeCubicM": 60375
+    },
+    "verified": true,
+    "regulatoryImplication": "Structure erected inside the 150m Adyar River High Flood Level (HFL) buffer boundary"
+  },
+  "verificationMatrix": [
+    {
+      "id": "ver-chn-01",
+      "name": "Temporal Persistence",
+      "type": "temporal_persistence",
+      "status": "passing",
+      "detail": "Observed continuously across 18 distinct cloud-free passes between April 2022 and August 2026.",
+      "evaluatedFalseSignal": "Temporary shanties or festival canopies",
+      "dismissalRationale": "Multi-year structural stability rejects temporary setup"
+    },
+    {
+      "id": "ver-chn-02",
+      "name": "Spatial & Edge Consistency",
+      "type": "spatial_consistency",
+      "status": "passing",
+      "detail": "Sub-pixel vector edge alignment matches cadastral parcel 44/2B with IoU > 0.92.",
+      "evaluatedFalseSignal": "Adyar river mudbank silt deposition",
+      "dismissalRationale": "Rectangular orthogonal geometric boundary rules out sedimentary deposit"
+    },
+    {
+      "id": "ver-chn-03",
+      "name": "Cross-Sensor Independent Verification",
+      "type": "cross_observation",
+      "status": "passing",
+      "detail": "Co-registered across Sentinel-2 (optical), Landsat-9 (thermal OLI-2), and Sentinel-1 (C-band SAR backscatter).",
+      "evaluatedFalseSignal": "Optical sensor glare or sun-glint off water",
+      "dismissalRationale": "High SAR double-bounce radar backscatter (+14.2 dB) confirms solid vertical masonry walls"
+    },
+    {
+      "id": "ver-chn-04",
+      "name": "Monsoon Flooding Inundation Filter",
+      "type": "magnitude",
+      "status": "passing",
+      "detail": "Evaluated against 2023 Michaung Cyclone flood level; structure displaced 4,200m³ floodplain storage.",
+      "evaluatedFalseSignal": "Seasonal monsoon marsh vegetation bloom",
+      "dismissalRationale": "Low NDVI (<0.12) and high NDBI (>0.38) confirm impervious built material"
+    },
+    {
+      "id": "ver-chn-05",
+      "name": "Geodetic Registration Precision",
+      "type": "quality",
+      "status": "passing",
+      "detail": "GCP tie-points anchored to Maraimalai Adigal Bridge monument with RMS error < 0.18 pixels.",
+      "evaluatedFalseSignal": "Episodic sensor parallax or terrain elevation distortion",
+      "dismissalRationale": "Residual horizontal displacement well below sensor ground resolution"
+    }
+  ],
+  "provenanceLineage": [
+    {
+      "id": "prov-node-1",
+      "type": "finding",
+      "label": "Finding: Riverbank Building Appearance Event",
+      "detail": "New 3,450 m² commercial complex constructed in Adyar River 150m buffer corridor (Kotturpuram, Chennai)"
+    },
+    {
+      "id": "prov-node-2",
+      "type": "feature",
+      "label": "Cadastral Feature CHN-ADY-2024-001",
+      "detail": "Polygon footprint: [80.237, 13.0185] to [80.240, 13.0205], 5 floors (17.5m)"
+    },
+    {
+      "id": "prov-node-3",
+      "type": "observation",
+      "label": "Observation Pair (2020-01-15 ↔ 2024-03-22)",
+      "detail": "Sentinel-2 MSI Orthorectified Bottom-Of-Atmosphere (L2A) reflectance"
+    },
+    {
+      "id": "prov-node-4",
+      "type": "stac_item",
+      "label": "STAC: S2A_MSIL2A_20240322T044701_N0510_R119_T44PMV",
+      "detail": "Tile 44PMV (Chennai Metropolitan), Sun Azimuth: 118.4°, Cloud: 0.00%"
+    },
+    {
+      "id": "prov-node-5",
+      "type": "source",
+      "label": "Sensor: European Space Agency / ISRO Multi-Mission",
+      "detail": "Sentinel-2A MultiSpectral Instrument (Bands 2, 3, 4, 8 at 10m GSD)"
+    },
+    {
+      "id": "prov-node-6",
+      "type": "zarr_coordinate",
+      "label": "Zarr Datacube Slice: t='2024-03-22T04:47:01Z'",
+      "detail": "Chennai_Rivers_Cube.zarr / time_index: 384, spatial_chunk: [44, 21]"
+    },
+    {
+      "id": "prov-node-7",
+      "type": "spatial_slice",
+      "label": "Adyar Estuarine Spatial Slice: [80.230:80.245, 13.015:13.025]",
+      "detail": "150m river buffer query intersection over Musi/Adyar hydraulic boundary model"
+    }
+  ]
+}

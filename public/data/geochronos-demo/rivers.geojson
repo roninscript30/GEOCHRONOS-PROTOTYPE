@@ -1,0 +1,285 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 101,
+      "properties": {
+        "name": "Adyar River Main Channel",
+        "type": "river",
+        "status": "critical_basin"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            80.12,
+            12.98
+          ],
+          [
+            80.155,
+            12.998
+          ],
+          [
+            80.185,
+            13.015
+          ],
+          [
+            80.22,
+            13.017
+          ],
+          [
+            80.245,
+            13.019
+          ],
+          [
+            80.278,
+            13.012
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 102,
+      "properties": {
+        "name": "Cooum River Channel",
+        "type": "river",
+        "status": "urban_waterway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            80.15,
+            13.07
+          ],
+          [
+            80.18,
+            13.068
+          ],
+          [
+            80.205,
+            13.065
+          ],
+          [
+            80.23,
+            13.071
+          ],
+          [
+            80.275,
+            13.068
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103,
+      "properties": {
+        "name": "National Highway NH-48 Expressway Corridor",
+        "type": "road",
+        "status": "arterial_highway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            79.88,
+            12.955
+          ],
+          [
+            79.915,
+            12.965
+          ],
+          [
+            79.945,
+            12.975
+          ],
+          [
+            79.985,
+            12.99
+          ],
+          [
+            80.04,
+            13.015
+          ],
+          [
+            80.095,
+            13.045
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 104,
+      "properties": {
+        "name": "Pallikaranai Marsh Inflow Channel & Basin",
+        "type": "wetland",
+        "status": "eco_conservation"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            80.2,
+            12.915
+          ],
+          [
+            80.21,
+            12.925
+          ],
+          [
+            80.218,
+            12.935
+          ],
+          [
+            80.225,
+            12.95
+          ],
+          [
+            80.235,
+            12.97
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 105,
+      "properties": {
+        "name": "Oragadam - Sriperumbudur Industrial Expressway",
+        "type": "industrial_road",
+        "status": "logistics_spine"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            79.89,
+            12.81
+          ],
+          [
+            79.91,
+            12.822
+          ],
+          [
+            79.925,
+            12.835
+          ],
+          [
+            79.94,
+            12.86
+          ],
+          [
+            79.945,
+            12.975
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 106,
+      "properties": {
+        "name": "Vaigai River Channel (Madurai)",
+        "type": "river",
+        "status": "major_basin"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.08,
+            9.905
+          ],
+          [
+            78.105,
+            9.918
+          ],
+          [
+            78.12,
+            9.925
+          ],
+          [
+            78.145,
+            9.932
+          ],
+          [
+            78.175,
+            9.94
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 107,
+      "properties": {
+        "name": "Noyyal River Basin (Coimbatore)",
+        "type": "river",
+        "status": "major_basin"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            76.92,
+            11
+          ],
+          [
+            76.945,
+            11.01
+          ],
+          [
+            76.96,
+            11.018
+          ],
+          [
+            76.985,
+            11.025
+          ],
+          [
+            77.02,
+            11.035
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 108,
+      "properties": {
+        "name": "Vegavathi River Floodplain (Kancheepuram)",
+        "type": "river",
+        "status": "major_basin"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            79.67,
+            12.82
+          ],
+          [
+            79.69,
+            12.828
+          ],
+          [
+            79.704,
+            12.834
+          ],
+          [
+            79.725,
+            12.842
+          ],
+          [
+            79.75,
+            12.855
+          ]
+        ]
+      }
+    }
+  ]
+}

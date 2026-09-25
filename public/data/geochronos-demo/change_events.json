@@ -1,0 +1,203 @@
+[
+  {
+    "id": "chg-chn-001",
+    "type": "appearance",
+    "title": "New Commercial Complex Appearance in Adyar River Floodplain",
+    "siteId": "bldg-chn-001",
+    "featureId": "CHN-ADY-2024-001",
+    "locality": "Kotturpuram, Chennai",
+    "river": "Adyar River",
+    "riverProximityM": 125,
+    "confidence": 0.96,
+    "interval": "2020-01-15 to 2024-03-22",
+    "intervalHuman": "4 years 2 months",
+    "extent": {
+      "areaSqm": 3450,
+      "floors": 5,
+      "heightM": 17.5,
+      "displacedFloodVolumeM3": 60375
+    },
+    "spectralChange": {
+      "ndbiDelta": "+0.52 (Vegetation/Soil to Impervious Concrete)",
+      "ndviDelta": "-0.22 (Loss of natural floodplain vegetation)"
+    },
+    "radarChange": {
+      "sarBackscatterDeltaDb": "+14.2 dB (Double-bounce corner reflection from vertical masonry)"
+    },
+    "regulatoryClassification": "Violation of 150m Adyar River High Flood Level (HFL) No-Construction Buffer Zone"
+  },
+  {
+    "id": "chg-chn-002",
+    "type": "expansion",
+    "title": "Industrial Logistics Depot Expansion near Adyar River",
+    "siteId": "bldg-chn-002",
+    "featureId": "CHN-ADY-2024-002",
+    "locality": "Nandambakkam, Chennai",
+    "river": "Adyar River",
+    "riverProximityM": 170,
+    "confidence": 0.91,
+    "interval": "2021-06-10 to 2024-01-18",
+    "intervalHuman": "2 years 7 months",
+    "extent": {
+      "areaSqm": 4800,
+      "floors": 3,
+      "heightM": 11,
+      "displacedFloodVolumeM3": 52800
+    },
+    "regulatoryClassification": "Peripheral Buffer Zone Construction"
+  },
+  {
+    "id": "chg-rd-001",
+    "type": "expansion",
+    "title": "Four-Lane Expressway Embankment & Bituminous Surfacing Expansion",
+    "siteId": "rd-spb-001",
+    "featureId": "RD-SPB-2024-001",
+    "locality": "Sriperumbudur Industrial Corridor, Tamil Nadu",
+    "river": "National Highway NH-48 Corridor",
+    "riverProximityM": 0,
+    "confidence": 0.96,
+    "interval": "2021-03-10 to 2024-05-15",
+    "intervalHuman": "3 years 2 months",
+    "extent": {
+      "areaSqm": 8400,
+      "floors": 2,
+      "heightM": 12
+    },
+    "spectralChange": {
+      "ndbiDelta": "+0.58 (Subgrade to Asphalt Concrete Pavement)",
+      "ndviDelta": "-0.32 (Corridor Right-of-Way clearing)"
+    },
+    "radarChange": {
+      "sarBackscatterDeltaDb": "+11.4 dB (Specular smooth paved road reflection)"
+    },
+    "regulatoryClassification": "National Highway Right-of-Way (RoW) Clearance and Arterial Widening"
+  },
+  {
+    "id": "chg-rd-002",
+    "type": "expansion",
+    "title": "Outer Ring Road Interchange Logistics Arterial Link",
+    "siteId": "rd-spb-002",
+    "featureId": "RD-SPB-2024-002",
+    "locality": "Outer Ring Road, Chennai Peripheral",
+    "river": "Outer Ring Corridor",
+    "riverProximityM": 20,
+    "confidence": 0.91,
+    "interval": "2022-04-10 to 2024-06-20",
+    "intervalHuman": "2 years 2 months",
+    "extent": {
+      "areaSqm": 6200,
+      "floors": 1,
+      "heightM": 8
+    },
+    "regulatoryClassification": "Peripheral Ring Road Infrastructure Extension"
+  },
+  {
+    "id": "chg-dm-001",
+    "type": "disappearance",
+    "title": "Unauthorized Structure Demolition & Wetland Ecological Restoration",
+    "siteId": "dm-plk-001",
+    "featureId": "DM-PLK-2024-001",
+    "locality": "Pallikaranai Marshland, Chennai",
+    "river": "Pallikaranai Water Basin",
+    "riverProximityM": 10,
+    "confidence": 0.97,
+    "interval": "2020-02-12 to 2024-02-28",
+    "intervalHuman": "4 years 0 months",
+    "extent": {
+      "areaSqm": 4200,
+      "floors": 0,
+      "heightM": 0.5
+    },
+    "spectralChange": {
+      "ndbiDelta": "-0.61 (Removal of masonry concrete and metal sheds)",
+      "ndviDelta": "+0.44 (Natural marshland reed and vegetation regrowth)"
+    },
+    "radarChange": {
+      "sarBackscatterDeltaDb": "-14.8 dB (Loss of vertical dihedral corner reflections)"
+    },
+    "regulatoryClassification": "High Court Mandated Wetland Encroachment Clearance & Eco-Restoration"
+  },
+  {
+    "id": "chg-gw-001",
+    "type": "expansion",
+    "title": "12,500 m² High-Volume Assembly Facility Footprint Expansion",
+    "siteId": "gw-org-001",
+    "featureId": "GW-ORG-2024-001",
+    "locality": "Oragadam Industrial Corridor, Sriperumbudur",
+    "river": "Industrial Belt Basin",
+    "riverProximityM": 350,
+    "confidence": 0.98,
+    "interval": "2021-08-15 to 2024-04-10",
+    "intervalHuman": "2 years 8 months",
+    "extent": {
+      "areaSqm": 12500,
+      "floors": 3,
+      "heightM": 18
+    },
+    "spectralChange": {
+      "ndbiDelta": "+0.64 (Graded gravel to insulated metal roof & concrete apron)",
+      "ndviDelta": "-0.28"
+    },
+    "radarChange": {
+      "sarBackscatterDeltaDb": "+16.2 dB (High dielectric structural steel return)"
+    },
+    "regulatoryClassification": "Approved Industrial Master Plan with Mandatory Retention Basins"
+  },
+  {
+    "id": "chg-mdu-001",
+    "type": "appearance",
+    "title": "Commercial Construction on Vaigai Riverbank Encroachment",
+    "siteId": "ct-mdu-001",
+    "featureId": "CT-MDU-2024-001",
+    "locality": "Vaigai Riverbank, Madurai",
+    "river": "Vaigai River",
+    "riverProximityM": 65,
+    "confidence": 0.95,
+    "interval": "2021-05-10 to 2024-03-25",
+    "intervalHuman": "2 years 10 months",
+    "extent": {
+      "areaSqm": 3800,
+      "floors": 4,
+      "heightM": 15
+    },
+    "regulatoryClassification": "River Conservation Zone Encroachment"
+  },
+  {
+    "id": "chg-cbe-001",
+    "type": "expansion",
+    "title": "Avinashi Road Tech Park Footprint Expansion",
+    "siteId": "ct-cbe-001",
+    "featureId": "CT-CBE-2024-001",
+    "locality": "Avinashi Road, Coimbatore",
+    "river": "Noyyal River Basin",
+    "riverProximityM": 220,
+    "confidence": 0.94,
+    "interval": "2022-03-12 to 2024-05-18",
+    "intervalHuman": "2 years 2 months",
+    "extent": {
+      "areaSqm": 7200,
+      "floors": 5,
+      "heightM": 19
+    },
+    "regulatoryClassification": "Commercial IT Corridor Master Plan"
+  },
+  {
+    "id": "chg-kpm-001",
+    "type": "appearance",
+    "title": "Vegavathi River Floodplain Commercial Construction",
+    "siteId": "ct-kpm-001",
+    "featureId": "CT-KPM-2024-001",
+    "locality": "Vegavathi Floodplain, Kancheepuram",
+    "river": "Vegavathi River",
+    "riverProximityM": 80,
+    "confidence": 0.93,
+    "interval": "2022-07-18 to 2024-06-15",
+    "intervalHuman": "1 year 11 months",
+    "extent": {
+      "areaSqm": 3100,
+      "floors": 3,
+      "heightM": 12
+    },
+    "regulatoryClassification": "Floodplain Buffer Encroachment"
+  }
+]

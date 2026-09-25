@@ -1,0 +1,725 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "id": "bldg-chn-001",
+        "featureId": "CHN-ADY-2024-001",
+        "name": "Site Alpha — Kotturpuram Riverbank Commercial Complex",
+        "locality": "Kotturpuram, Chennai",
+        "river": "Adyar River",
+        "category": "river_encroachment",
+        "proximity_river_m": 125,
+        "area_sqm": 3450,
+        "floors": 5,
+        "height": 17.5,
+        "status": "candidate",
+        "score": 0.96,
+        "zoning": "River Floodplain Zone",
+        "riskLevel": "CRITICAL_ENCROACHMENT",
+        "firstObserved": "2022-04-18"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.237,
+              13.0185
+            ],
+            [
+              80.24,
+              13.0185
+            ],
+            [
+              80.24,
+              13.0205
+            ],
+            [
+              80.237,
+              13.0205
+            ],
+            [
+              80.237,
+              13.0185
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "properties": {
+        "id": "bldg-chn-002",
+        "featureId": "CHN-ADY-2024-002",
+        "name": "Site Beta — Nandambakkam Trade Depot",
+        "locality": "Nandambakkam, Chennai",
+        "river": "Adyar River",
+        "category": "river_encroachment",
+        "proximity_river_m": 170,
+        "area_sqm": 4800,
+        "floors": 3,
+        "height": 11,
+        "status": "candidate",
+        "score": 0.91,
+        "zoning": "Commercial/Industrial",
+        "riskLevel": "BUFFER_PERIPHERY",
+        "firstObserved": "2022-11-04"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.1855,
+              13.0175
+            ],
+            [
+              80.189,
+              13.0175
+            ],
+            [
+              80.189,
+              13.0195
+            ],
+            [
+              80.1855,
+              13.0195
+            ],
+            [
+              80.1855,
+              13.0175
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "properties": {
+        "id": "bldg-chn-003",
+        "featureId": "CHN-ADY-2024-003",
+        "name": "Site Gamma — Manapakkam Tech Park Wing",
+        "locality": "Manapakkam, Chennai",
+        "river": "Adyar River",
+        "category": "river_encroachment",
+        "proximity_river_m": 210,
+        "area_sqm": 6200,
+        "floors": 7,
+        "height": 24.5,
+        "status": "candidate",
+        "score": 0.85,
+        "zoning": "IT Park Zone",
+        "riskLevel": "ELEVATED_RUNOFF",
+        "firstObserved": "2023-02-12"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.172,
+              13.013
+            ],
+            [
+              80.176,
+              13.013
+            ],
+            [
+              80.176,
+              13.0155
+            ],
+            [
+              80.172,
+              13.0155
+            ],
+            [
+              80.172,
+              13.013
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "properties": {
+        "id": "bldg-chn-004",
+        "featureId": "CHN-ADY-2024-004",
+        "name": "Site Delta — Saidapet West Mixed Block",
+        "locality": "Saidapet West, Chennai",
+        "river": "Adyar River",
+        "category": "river_encroachment",
+        "proximity_river_m": 90,
+        "area_sqm": 2150,
+        "floors": 4,
+        "height": 14,
+        "status": "candidate",
+        "score": 0.82,
+        "zoning": "High Density Residential",
+        "riskLevel": "CRITICAL_ENCROACHMENT",
+        "firstObserved": "2023-08-30"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.2165,
+              13.017
+            ],
+            [
+              80.2195,
+              13.017
+            ],
+            [
+              80.2195,
+              13.019
+            ],
+            [
+              80.2165,
+              13.019
+            ],
+            [
+              80.2165,
+              13.017
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "properties": {
+        "id": "bldg-chn-005",
+        "featureId": "CHN-COO-2024-005",
+        "name": "Site Epsilon — Koyambedu Storage Hub",
+        "locality": "Koyambedu, Chennai",
+        "river": "Cooum River",
+        "category": "river_encroachment",
+        "proximity_river_m": 115,
+        "area_sqm": 5100,
+        "floors": 2,
+        "height": 8,
+        "status": "candidate",
+        "score": 0.78,
+        "zoning": "Commercial Storage",
+        "riskLevel": "BUFFER_VIOLATION",
+        "firstObserved": "2022-09-14"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.1985,
+              13.0655
+            ],
+            [
+              80.2015,
+              13.0655
+            ],
+            [
+              80.2015,
+              13.068
+            ],
+            [
+              80.1985,
+              13.068
+            ],
+            [
+              80.1985,
+              13.0655
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "properties": {
+        "id": "rd-spb-001",
+        "featureId": "RD-SPB-2024-001",
+        "name": "Site R-01 — Sriperumbudur Highway Logistics Interchange",
+        "locality": "Sriperumbudur Industrial Corridor",
+        "river": "National Highway NH-48",
+        "category": "road_development",
+        "proximity_river_m": 0,
+        "area_sqm": 8400,
+        "floors": 2,
+        "height": 12,
+        "status": "candidate",
+        "score": 0.96,
+        "zoning": "Highway Logistics & Right-of-Way Buffer",
+        "riskLevel": "PERIPHERAL_LOGISTICS_GROWTH",
+        "firstObserved": "2022-06-15"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              79.943,
+              12.973
+            ],
+            [
+              79.948,
+              12.973
+            ],
+            [
+              79.948,
+              12.977
+            ],
+            [
+              79.943,
+              12.977
+            ],
+            [
+              79.943,
+              12.973
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "properties": {
+        "id": "rd-spb-002",
+        "featureId": "RD-SPB-2024-002",
+        "name": "Site R-02 — Vandalur-Minjur Outer Ring Road Arterial Link",
+        "locality": "Outer Ring Road, Chennai Peripheral",
+        "river": "Outer Ring Corridor",
+        "category": "road_development",
+        "proximity_river_m": 20,
+        "area_sqm": 6200,
+        "floors": 1,
+        "height": 8,
+        "status": "candidate",
+        "score": 0.91,
+        "zoning": "Transport Infrastructure Corridor",
+        "riskLevel": "ARTERIAL_CONSTRUCTION",
+        "firstObserved": "2022-10-20"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.08,
+              12.913
+            ],
+            [
+              80.084,
+              12.913
+            ],
+            [
+              80.084,
+              12.917
+            ],
+            [
+              80.08,
+              12.917
+            ],
+            [
+              80.08,
+              12.913
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "properties": {
+        "id": "rd-spb-003",
+        "featureId": "RD-SPB-2024-003",
+        "name": "Site R-03 — Poonamallee Bypass Link Road Four-Lane Extension",
+        "locality": "Poonamallee Bypass",
+        "river": "Poonamallee Arterial",
+        "category": "road_development",
+        "proximity_river_m": 15,
+        "area_sqm": 4900,
+        "floors": 1,
+        "height": 6.5,
+        "status": "candidate",
+        "score": 0.87,
+        "zoning": "Arterial Transport Expansion",
+        "riskLevel": "ROAD_WIDENING",
+        "firstObserved": "2023-01-14"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.093,
+              13.043
+            ],
+            [
+              80.097,
+              13.043
+            ],
+            [
+              80.097,
+              13.047
+            ],
+            [
+              80.093,
+              13.047
+            ],
+            [
+              80.093,
+              13.043
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "properties": {
+        "id": "dm-plk-001",
+        "featureId": "DM-PLK-2024-001",
+        "name": "Site D-01 — Pallikaranai Marsh Wetland Restoration Parcel",
+        "locality": "Pallikaranai Marshland, Chennai",
+        "river": "Pallikaranai Water Basin",
+        "category": "demolition_restoration",
+        "proximity_river_m": 10,
+        "area_sqm": 4200,
+        "floors": 0,
+        "height": 0.5,
+        "status": "candidate",
+        "score": 0.97,
+        "zoning": "Protected Wetland / Eco-Sensitive Zone",
+        "riskLevel": "RESTORED_WATERBODY",
+        "firstObserved": "2020-02-12"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.216,
+              12.933
+            ],
+            [
+              80.22,
+              12.933
+            ],
+            [
+              80.22,
+              12.937
+            ],
+            [
+              80.216,
+              12.937
+            ],
+            [
+              80.216,
+              12.933
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "properties": {
+        "id": "dm-plk-002",
+        "featureId": "DM-PLK-2024-002",
+        "name": "Site D-02 — Velachery Lake North Embankment Cleared Structures",
+        "locality": "Velachery Lake North",
+        "river": "Velachery Inflow Channel",
+        "category": "demolition_restoration",
+        "proximity_river_m": 5,
+        "area_sqm": 3100,
+        "floors": 0,
+        "height": 0.5,
+        "status": "candidate",
+        "score": 0.93,
+        "zoning": "Waterbody Inflow Buffer",
+        "riskLevel": "RESTORED_WATERBODY",
+        "firstObserved": "2020-04-18"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.22,
+              12.979
+            ],
+            [
+              80.224,
+              12.979
+            ],
+            [
+              80.224,
+              12.983
+            ],
+            [
+              80.22,
+              12.983
+            ],
+            [
+              80.22,
+              12.979
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "properties": {
+        "id": "gw-org-001",
+        "featureId": "GW-ORG-2024-001",
+        "name": "Site G-01 — Oragadam Auto Corridor Megafactory Wing",
+        "locality": "Oragadam Industrial Corridor, Sriperumbudur",
+        "river": "Industrial Belt Basin",
+        "category": "industrial_growth",
+        "proximity_river_m": 350,
+        "area_sqm": 12500,
+        "floors": 3,
+        "height": 18,
+        "status": "candidate",
+        "score": 0.98,
+        "zoning": "SIPCOT Industrial Zone",
+        "riskLevel": "HIGH_VOLUME_EXPANSION",
+        "firstObserved": "2021-08-15"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              79.923,
+              12.833
+            ],
+            [
+              79.928,
+              12.833
+            ],
+            [
+              79.928,
+              12.838
+            ],
+            [
+              79.923,
+              12.838
+            ],
+            [
+              79.923,
+              12.833
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "properties": {
+        "id": "gw-org-002",
+        "featureId": "GW-ORG-2024-002",
+        "name": "Site G-02 — Siruseri SIPCOT Phase II Assembly Facility",
+        "locality": "Siruseri IT SEZ, OMR Corridor",
+        "river": "Muttukadu Backwater Periphery",
+        "category": "industrial_growth",
+        "proximity_river_m": 450,
+        "area_sqm": 9800,
+        "floors": 6,
+        "height": 22,
+        "status": "candidate",
+        "score": 0.94,
+        "zoning": "IT & Electronics SEZ",
+        "riskLevel": "HIGH_VOLUME_EXPANSION",
+        "firstObserved": "2022-01-20"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.213,
+              12.823
+            ],
+            [
+              80.217,
+              12.823
+            ],
+            [
+              80.217,
+              12.827
+            ],
+            [
+              80.213,
+              12.827
+            ],
+            [
+              80.213,
+              12.823
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "properties": {
+        "id": "ct-mdu-001",
+        "featureId": "CT-MDU-2024-001",
+        "name": "Site M-01 — Madurai Vaigai Riverbank Commercial Encroachment",
+        "locality": "Vaigai Riverbank, Madurai",
+        "river": "Vaigai River",
+        "category": "regional_city",
+        "proximity_river_m": 65,
+        "area_sqm": 3800,
+        "floors": 4,
+        "height": 15,
+        "status": "candidate",
+        "score": 0.95,
+        "zoning": "River Conservation Zone",
+        "riskLevel": "CRITICAL_ENCROACHMENT",
+        "firstObserved": "2021-05-10"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.118,
+              9.923
+            ],
+            [
+              78.122,
+              9.923
+            ],
+            [
+              78.122,
+              9.927
+            ],
+            [
+              78.118,
+              9.927
+            ],
+            [
+              78.118,
+              9.923
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "properties": {
+        "id": "ct-cbe-001",
+        "featureId": "CT-CBE-2024-001",
+        "name": "Site C-01 — Coimbatore Avinashi Road Tech Corridor Wing",
+        "locality": "Avinashi Road, Coimbatore",
+        "river": "Noyyal River Basin",
+        "category": "regional_city",
+        "proximity_river_m": 220,
+        "area_sqm": 7200,
+        "floors": 5,
+        "height": 19,
+        "status": "candidate",
+        "score": 0.94,
+        "zoning": "Commercial IT Corridor",
+        "riskLevel": "BUFFER_PERIPHERY",
+        "firstObserved": "2022-03-12"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.954,
+              11.015
+            ],
+            [
+              76.958,
+              11.015
+            ],
+            [
+              76.958,
+              11.019
+            ],
+            [
+              76.954,
+              11.019
+            ],
+            [
+              76.954,
+              11.015
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "properties": {
+        "id": "ct-kpm-001",
+        "featureId": "CT-KPM-2024-001",
+        "name": "Site K-01 — Kancheepuram Vegavathi River Floodplain Complex",
+        "locality": "Vegavathi Floodplain, Kancheepuram",
+        "river": "Vegavathi River",
+        "category": "regional_city",
+        "proximity_river_m": 80,
+        "area_sqm": 3100,
+        "floors": 3,
+        "height": 12,
+        "status": "candidate",
+        "score": 0.93,
+        "zoning": "Floodplain Buffer",
+        "riskLevel": "CRITICAL_ENCROACHMENT",
+        "firstObserved": "2022-07-18"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              79.702,
+              12.832
+            ],
+            [
+              79.706,
+              12.832
+            ],
+            [
+              79.706,
+              12.836
+            ],
+            [
+              79.702,
+              12.836
+            ],
+            [
+              79.702,
+              12.832
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

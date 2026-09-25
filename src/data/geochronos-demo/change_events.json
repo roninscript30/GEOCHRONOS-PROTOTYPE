@@ -1,0 +1,69 @@
+[
+  {
+    "id": "chg-chn-001",
+    "type": "appearance",
+    "title": "New Commercial Complex Appearance in Adyar River Floodplain",
+    "siteId": "CHN-SITE-01",
+    "featureId": "CHN-ADY-2024-001",
+    "locality": "Kotturpuram, Chennai",
+    "river": "Adyar River",
+    "riverProximityM": 125,
+    "confidence": 0.96,
+    "interval": "2020-01-15 to 2024-03-22",
+    "intervalHuman": "4 years 2 months",
+    "extent": {
+      "areaSqm": 3450,
+      "floors": 5,
+      "heightM": 17.5,
+      "displacedFloodVolumeM3": 60375
+    },
+    "spectralChange": {
+      "ndbiDelta": "+0.52 (Vegetation/Soil to Impervious Concrete)",
+      "ndviDelta": "-0.22 (Loss of natural floodplain vegetation)"
+    },
+    "radarChange": {
+      "sarBackscatterDeltaDb": "+14.2 dB (Double-bounce corner reflection from vertical masonry)"
+    },
+    "regulatoryClassification": "Violation of 150m Adyar River High Flood Level (HFL) No-Construction Buffer Zone"
+  },
+  {
+    "id": "chg-chn-002",
+    "type": "expansion",
+    "title": "Industrial Logistics Depot Expansion near Adyar River",
+    "siteId": "CHN-SITE-02",
+    "featureId": "CHN-ADY-2024-002",
+    "locality": "Nandambakkam, Chennai",
+    "river": "Adyar River",
+    "riverProximityM": 170,
+    "confidence": 0.91,
+    "interval": "2021-06-10 to 2024-01-18",
+    "intervalHuman": "2 years 7 months",
+    "extent": {
+      "areaSqm": 4800,
+      "floors": 3,
+      "heightM": 11.0,
+      "displacedFloodVolumeM3": 52800
+    },
+    "regulatoryClassification": "Peripheral Buffer Zone Construction"
+  },
+  {
+    "id": "chg-chn-003",
+    "type": "appearance",
+    "title": "Tech Park Extension on Manapakkam Floodplain",
+    "siteId": "CHN-SITE-03",
+    "featureId": "CHN-ADY-2024-003",
+    "locality": "Manapakkam, Chennai",
+    "river": "Adyar River",
+    "riverProximityM": 210,
+    "confidence": 0.85,
+    "interval": "2022-03-01 to 2024-02-15",
+    "intervalHuman": "1 year 11 months",
+    "extent": {
+      "areaSqm": 6200,
+      "floors": 7,
+      "heightM": 24.5,
+      "displacedFloodVolumeM3": 151900
+    },
+    "regulatoryClassification": "Special IT Park Zone Boundary Review"
+  }
+]

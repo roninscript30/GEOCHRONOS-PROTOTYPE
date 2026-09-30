@@ -1,0 +1,14 @@
+{
+  "long_name": "Surface Reflectance",
+  "units": "normalised",
+  "canonical_bands": "blue,green,red,nir,swir1,swir2",
+  "nodata": "NaN",
+  "source": "GeoChronos standardised + normalised",
+  "grid_mapping": "spatial_ref",
+  "_ARRAY_DIMENSIONS": [
+    "time",
+    "band",
+    "y",
+    "x"
+  ]
+}

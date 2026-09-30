@@ -1,0 +1,232 @@
+{
+  "contract_version": "1.0.0",
+  "project": "GeoChronos",
+  "base_url": "http://127.0.0.1:8000",
+  "crs": {
+    "native": "EPSG:32644 (UTM Zone 44N, meters)",
+    "display": "EPSG:4326 (WGS84, Lon/Lat degrees)"
+  },
+  "spatial_bounds": {
+    "native_utm": {
+      "left": 400000.0,
+      "bottom": 1420000.0,
+      "right": 435000.0,
+      "top": 1470000.0
+    },
+    "display_wgs84": {
+      "min_lon": 80.07845,
+      "min_lat": 12.84343,
+      "max_lon": 80.39989,
+      "max_lat": 13.29647
+    },
+    "center": {
+      "lon": 80.23917,
+      "lat": 13.06995
+    }
+  },
+  "canonical_bands": [
+    "blue",
+    "green",
+    "red",
+    "nir",
+    "swir1",
+    "swir2"
+  ],
+  "observation_years": [
+    2011,
+    2015,
+    2020,
+    2026
+  ],
+  "feature_classes": [
+    "water_body",
+    "vegetation",
+    "urban_area",
+    "building",
+    "river"
+  ],
+  "feature_colors": {
+    "water_body": "#0077be",
+    "vegetation": "#2e7d32",
+    "urban_area": "#c2185b",
+    "building": "#f57c00",
+    "river": "#0288d1"
+  },
+  "all_endpoints": [
+    {
+      "path": "/health",
+      "method": "GET",
+      "description": "Quick system health check and dependency status overview",
+      "response_example": {
+        "status": "healthy",
+        "version": "0.1.0",
+        "project": "GeoChronos"
+      }
+    },
+    {
+      "path": "/health/dependencies",
+      "method": "GET",
+      "description": "Detailed health verification of Zarr cube, STAC catalog, Qdrant vector DB, and OmniRoute",
+      "response_example": {
+        "zarr_cube": {
+          "status": "healthy"
+        },
+        "stac_catalog": {
+          "status": "healthy"
+        }
+      }
+    },
+    {
+      "path": "/api/map/bounds",
+      "method": "GET",
+      "description": "Spatial bounds, center coordinate, resolution, and time steps for MapLibre/Leaflet map setup",
+      "response_example": {
+        "crs_native": "EPSG:32644",
+        "crs_display": "EPSG:4326",
+        "resolution_m": 10.0
+      }
+    },
+    {
+      "path": "/api/map/features",
+      "method": "GET",
+      "query_params": [
+        "feature_class",
+        "year",
+        "min_lon",
+        "min_lat",
+        "max_lon",
+        "max_lat",
+        "limit"
+      ],
+      "description": "Server-side filtered GeoJSON FeatureCollection with pre-styled polygon geometries",
+      "response_type": "GeoJSON FeatureCollection"
+    },
+    {
+      "path": "/api/map/feature/{feature_id}",
+      "method": "GET",
+      "description": "Single feature GeoJSON Feature geometry with properties",
+      "response_type": "GeoJSON Feature"
+    },
+    {
+      "path": "/api/features",
+      "method": "GET",
+      "query_params": [
+        "feature_class",
+        "year",
+        "observation_id",
+        "limit",
+        "offset",
+        "include_geojson"
+      ],
+      "description": "Paginated list of vector features with attributes and area metrics",
+      "response_type": "FeatureListResponse"
+    },
+    {
+      "path": "/api/features/{feature_id}",
+      "method": "GET",
+      "description": "Full feature details including native UTM geometry, WGS84 GeoJSON, and 6-band spectral profile",
+      "response_type": "FeatureDetailResponse"
+    },
+    {
+      "path": "/api/features/{feature_id}/history",
+      "method": "GET",
+      "description": "Multi-year temporal matching history across 2011, 2015, 2020, and 2026",
+      "response_type": "FeatureHistoryResponse"
+    },
+    {
+      "path": "/api/cube/info",
+      "method": "GET",
+      "description": "4D Zarr datacube metadata, dimensions, resolution, and CF-1.8 attributes",
+      "response_example": {
+        "dimensions": {
+          "time": 4,
+          "band": 6,
+          "y": 5000,
+          "x": 3500
+        }
+      }
+    },
+    {
+      "path": "/api/cube/window",
+      "method": "POST",
+      "description": "Extract a lazy spatial sub-window with band statistics (min/mean/max/std) and preview grid",
+      "request_example": {
+        "year": 2026,
+        "min_x": 410000,
+        "min_y": 1430000,
+        "max_x": 411000,
+        "max_y": 1431000,
+        "bands": [
+          "red",
+          "nir"
+        ]
+      }
+    },
+    {
+      "path": "/api/cube/spectral-profile",
+      "method": "POST",
+      "description": "Extract 6-band reflectance signature for any coordinate",
+      "request_example": {
+        "x": 415000,
+        "y": 1445000,
+        "year": 2026
+      }
+    },
+    {
+      "path": "/api/cube/temporal-profile",
+      "method": "POST",
+      "description": "Extract multi-year reflectance trajectory for any coordinate and band",
+      "request_example": {
+        "x": 415000,
+        "y": 1445000,
+        "band": "nir"
+      }
+    },
+    {
+      "path": "/api/temporal/analyze",
+      "method": "POST",
+      "description": "Analyze temporal change, appearance, or disappearance between any two observation years",
+      "request_example": {
+        "feature_class": "water_body",
+        "from_year": 2011,
+        "to_year": 2026,
+        "limit": 20
+      }
+    },
+    {
+      "path": "/api/temporal/compare",
+      "method": "POST",
+      "description": "Matrix of class count and percentage transitions between two years",
+      "request_example": {
+        "from_year": 2011,
+        "to_year": 2026
+      }
+    },
+    {
+      "path": "/api/evidence/{feature_id}",
+      "method": "GET",
+      "description": "Grounded spatial raster evidence, STAC item, and datacube slice coordinates",
+      "response_type": "EvidenceResponse"
+    },
+    {
+      "path": "/api/provenance/{feature_id}",
+      "method": "GET",
+      "description": "Complete data lineage from raw Sentinel/Landsat observation to 384-dim vector embedding",
+      "response_type": "ProvenanceResponse"
+    },
+    {
+      "path": "/api/query",
+      "method": "POST",
+      "description": "Natural language query processing with structured query extraction, grounded answer, and GeoJSON",
+      "request_example": {
+        "query": "Find water bodies that disappeared between 2011 and 2026",
+        "limit": 10,
+        "include_geojson": true
+      }
+    }
+  ],
+  "error_structure": {
+    "detail": "Error description or Pydantic validation error list",
+    "status_code": 400
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "dataset_id": "geochronos_chennai",
+  "project": "GeoChronos",
+  "problem_statement_id": "SIH26227",
+  "study_area": "Chennai",
+  "crs": "EPSG:32644",
+  "resolution_m": 10.0,
+  "bounds_left": 400000.0,
+  "bounds_bottom": 1420000.0,
+  "bounds_right": 435000.0,
+  "bounds_top": 1470000.0,
+  "canonical_bands": "blue,green,red,nir,swir1,swir2",
+  "normalization_method": "min_max",
+  "time_values": "[2011, 2015, 2020, 2026]",
+  "source_observations": "[{'observation_id': 'chennai_2011', 'year': 2011, 'source_platform': 'landsat-5', 'sensor': 'Landsat-5 TM', 'acquisition_date': '2011-03-09'}, {'observation_id': 'chennai_2015', 'year': 2015, 'source_platform': 'Sentinel-2A', 'sensor': 'Sentinel-2A MSI', 'acquisition_date': '2015-12-28'}, {'observation_id': 'chennai_2020', 'year': 2020, 'source_platform': 'Sentinel-2A', 'sensor': 'Sentinel-2A MSI', 'acquisition_date': '2020-02-15'}, {'observation_id': 'chennai_2026', 'year': 2026, 'source_platform': 'Sentinel-2C', 'sensor': 'Sentinel-2C MSI', 'acquisition_date': '2026-03-05'}]",
+  "dimensions": "time x band x y x x",
+  "Conventions": "CF-1.8",
+  "institution": "SIH26227"
+}

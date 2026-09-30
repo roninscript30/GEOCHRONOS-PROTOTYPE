@@ -1,0 +1,19 @@
+{
+  "audit_name": "Investigation Dossier & Reporting Audit",
+  "timestamp": "2026-09-09T05:33:28Z",
+  "dossier_capabilities": {
+    "add_finding_from_discover": true,
+    "add_finding_from_site_dossier": true,
+    "add_finding_from_comparison": true,
+    "add_finding_from_raster_viewer": true,
+    "multi_epoch_crops_embedded": true,
+    "provenance_lineage_traceable": true,
+    "export_options": [
+      "JSON Dossier Export",
+      "Markdown Report",
+      "Browser Print / PDF"
+    ]
+  },
+  "reports_page_status": 200,
+  "verdict": "PASS"
+}

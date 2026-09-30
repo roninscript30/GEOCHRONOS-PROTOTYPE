@@ -1,0 +1,154 @@
+{
+  "year": 2011,
+  "acquisition_date": "2011-03-09",
+  "satellite": "landsat-5",
+  "sensor": "Landsat-5 TM",
+  "product": "Landsat C2 L2",
+  "processing_level": "Collection 2 Level-2 Surface Reflectance",
+  "collection": "landsat-c2-l2",
+  "source": "Microsoft Planetary Computer STAC API",
+  "source_product_id": "LT05_L2SP_142051_20110309_02_T1",
+  "scene_id": "LT05_L2SP_142051_20110309_02_T1",
+  "spatial_grid": {
+    "crs": "EPSG:32644",
+    "epsg": 32644,
+    "native_resolutions_present": [
+      "30m"
+    ],
+    "output_resolution": "10m x 10m",
+    "width": 3500,
+    "height": 5000,
+    "transform": [
+      10.0,
+      0.0,
+      400000.0,
+      0.0,
+      -10.0,
+      1470000.0
+    ],
+    "bounds_utm": {
+      "left": 400000.0,
+      "bottom": 1420000.0,
+      "right": 435000.0,
+      "top": 1470000.0,
+      "unit": "metres"
+    },
+    "bounds_wgs84": {
+      "min_longitude": 80.076774,
+      "min_latitude": 12.843429,
+      "max_longitude": 80.400979,
+      "max_latitude": 13.296471
+    }
+  },
+  "quality_metrics": {
+    "cloud_cover_scene_percentage": 0.0,
+    "is_partial_year": false
+  },
+  "radiometric_scaling": {
+    "scale_factor": 2.75e-05,
+    "offset": -0.2,
+    "nodata_value": 0,
+    "reflectance_convention": "Surface Reflectance (DN * 0.0000275 - 0.2)"
+  },
+  "bands": {
+    "B01_blue": {
+      "file_name": "B01_blue.tif",
+      "common_name": "blue",
+      "native_resolution": "30m",
+      "output_resolution": "10m",
+      "resampling_method": "bilinear",
+      "wavelength_nm": 485.0,
+      "data_type": "uint16",
+      "width": 3500,
+      "height": 5000,
+      "file_size_bytes": 22439807,
+      "valid_pixel_percentage": 100.0,
+      "asset_url": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/tm/2011/142/051/LT05_L2SP_142051_20110309_20200823_02_T1/LT05_L2SP_142051_20110309_20200823_02_T1_SR_B1.TIF?st=2026-09-01T08%3A36%3A49Z&se=2026-09-02T09%3A21%3A49Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-02T08%3A31%3A23Z&ske=2026-09-09T08%3A31%3A23Z&sks=b&skv=2025-07-05&sig=pKNcv8Qsp44UtoVP1HAaNH6E8hns27wnf1ZJgJ1E31I%3D"
+    },
+    "B02_green": {
+      "file_name": "B02_green.tif",
+      "common_name": "green",
+      "native_resolution": "30m",
+      "output_resolution": "10m",
+      "resampling_method": "bilinear",
+      "wavelength_nm": 560.0,
+      "data_type": "uint16",
+      "width": 3500,
+      "height": 5000,
+      "file_size_bytes": 19263762,
+      "valid_pixel_percentage": 100.0,
+      "asset_url": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/tm/2011/142/051/LT05_L2SP_142051_20110309_20200823_02_T1/LT05_L2SP_142051_20110309_20200823_02_T1_SR_B2.TIF?st=2026-09-01T08%3A36%3A49Z&se=2026-09-02T09%3A21%3A49Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-02T08%3A31%3A23Z&ske=2026-09-09T08%3A31%3A23Z&sks=b&skv=2025-07-05&sig=pKNcv8Qsp44UtoVP1HAaNH6E8hns27wnf1ZJgJ1E31I%3D"
+    },
+    "B03_red": {
+      "file_name": "B03_red.tif",
+      "common_name": "red",
+      "native_resolution": "30m",
+      "output_resolution": "10m",
+      "resampling_method": "bilinear",
+      "wavelength_nm": 660.0,
+      "data_type": "uint16",
+      "width": 3500,
+      "height": 5000,
+      "file_size_bytes": 20629811,
+      "valid_pixel_percentage": 100.0,
+      "asset_url": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/tm/2011/142/051/LT05_L2SP_142051_20110309_20200823_02_T1/LT05_L2SP_142051_20110309_20200823_02_T1_SR_B3.TIF?st=2026-09-01T08%3A36%3A49Z&se=2026-09-02T09%3A21%3A49Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-02T08%3A31%3A23Z&ske=2026-09-09T08%3A31%3A23Z&sks=b&skv=2025-07-05&sig=pKNcv8Qsp44UtoVP1HAaNH6E8hns27wnf1ZJgJ1E31I%3D"
+    },
+    "B04_nir": {
+      "file_name": "B04_nir.tif",
+      "common_name": "nir",
+      "native_resolution": "30m",
+      "output_resolution": "10m",
+      "resampling_method": "bilinear",
+      "wavelength_nm": 830.0,
+      "data_type": "uint16",
+      "width": 3500,
+      "height": 5000,
+      "file_size_bytes": 20644236,
+      "valid_pixel_percentage": 100.0,
+      "asset_url": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/tm/2011/142/051/LT05_L2SP_142051_20110309_20200823_02_T1/LT05_L2SP_142051_20110309_20200823_02_T1_SR_B4.TIF?st=2026-09-01T08%3A36%3A49Z&se=2026-09-02T09%3A21%3A49Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-02T08%3A31%3A23Z&ske=2026-09-09T08%3A31%3A23Z&sks=b&skv=2025-07-05&sig=pKNcv8Qsp44UtoVP1HAaNH6E8hns27wnf1ZJgJ1E31I%3D"
+    },
+    "B05_swir1": {
+      "file_name": "B05_swir1.tif",
+      "common_name": "swir1",
+      "native_resolution": "30m",
+      "output_resolution": "10m",
+      "resampling_method": "bilinear",
+      "wavelength_nm": 1650.0,
+      "data_type": "uint16",
+      "width": 3500,
+      "height": 5000,
+      "file_size_bytes": 23747937,
+      "valid_pixel_percentage": 100.0,
+      "asset_url": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/tm/2011/142/051/LT05_L2SP_142051_20110309_20200823_02_T1/LT05_L2SP_142051_20110309_20200823_02_T1_SR_B5.TIF?st=2026-09-01T08%3A36%3A49Z&se=2026-09-02T09%3A21%3A49Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-02T08%3A31%3A23Z&ske=2026-09-09T08%3A31%3A23Z&sks=b&skv=2025-07-05&sig=pKNcv8Qsp44UtoVP1HAaNH6E8hns27wnf1ZJgJ1E31I%3D"
+    },
+    "B07_swir2": {
+      "file_name": "B07_swir2.tif",
+      "common_name": "swir2",
+      "native_resolution": "30m",
+      "output_resolution": "10m",
+      "resampling_method": "bilinear",
+      "wavelength_nm": 2215.0,
+      "data_type": "uint16",
+      "width": 3500,
+      "height": 5000,
+      "file_size_bytes": 22053453,
+      "valid_pixel_percentage": 100.0,
+      "asset_url": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/tm/2011/142/051/LT05_L2SP_142051_20110309_20200823_02_T1/LT05_L2SP_142051_20110309_20200823_02_T1_SR_B7.TIF?st=2026-09-01T08%3A36%3A49Z&se=2026-09-02T09%3A21%3A49Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-02T08%3A31%3A23Z&ske=2026-09-09T08%3A31%3A23Z&sks=b&skv=2025-07-05&sig=pKNcv8Qsp44UtoVP1HAaNH6E8hns27wnf1ZJgJ1E31I%3D"
+    },
+    "qa_pixel": {
+      "file_name": "qa_pixel.tif",
+      "common_name": "qa_mask",
+      "native_resolution": "30m",
+      "output_resolution": "10m",
+      "resampling_method": "nearest",
+      "wavelength_nm": null,
+      "data_type": "uint16",
+      "width": 3500,
+      "height": 5000,
+      "file_size_bytes": 123515,
+      "valid_pixel_percentage": 100.0,
+      "asset_url": "https://landsateuwest.blob.core.windows.net/landsat-c2/level-2/standard/tm/2011/142/051/LT05_L2SP_142051_20110309_20200823_02_T1/LT05_L2SP_142051_20110309_20200823_02_T1_QA_PIXEL.TIF?st=2026-09-01T08%3A36%3A49Z&se=2026-09-02T09%3A21%3A49Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-09-02T08%3A31%3A23Z&ske=2026-09-09T08%3A31%3A23Z&sks=b&skv=2025-07-05&sig=pKNcv8Qsp44UtoVP1HAaNH6E8hns27wnf1ZJgJ1E31I%3D"
+    }
+  },
+  "processing_timestamp": "2026-09-02T08:38:01.965183+00:00"
+}

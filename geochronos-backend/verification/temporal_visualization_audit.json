@@ -1,0 +1,51 @@
+{
+  "audit_name": "Temporal Analysis and Change Visualization Audit",
+  "timestamp": "2026-09-09T05:33:28Z",
+  "candidate_retrieval_bug_resolution": {
+    "issue": "Backend previously queried only from_year features, leaving later list empty and reporting 0 dynamics events",
+    "fix": "Modified temporal_service.py to query candidates across both from_year and to_year",
+    "verified_results_count": 12,
+    "status": "PASS - Real dynamics detected"
+  },
+  "detected_events_sample": [
+    {
+      "feature_id": "water_body_2026_000000",
+      "status": "appeared",
+      "feature_class": "water_body"
+    },
+    {
+      "feature_id": "water_body_2026_000001",
+      "status": "appeared",
+      "feature_class": "water_body"
+    },
+    {
+      "feature_id": "water_body_2026_000002",
+      "status": "appeared",
+      "feature_class": "water_body"
+    },
+    {
+      "feature_id": "water_body_2026_000003",
+      "status": "appeared",
+      "feature_class": "water_body"
+    },
+    {
+      "feature_id": "water_body_2026_000004",
+      "status": "appeared",
+      "feature_class": "water_body"
+    }
+  ],
+  "class_transition_matrix": {
+    "http_status": 200,
+    "total_base_features": null,
+    "total_target_features": null,
+    "has_transitions": true
+  },
+  "comparison_map_modes": [
+    "2-UP Dual Map",
+    "4-UP Quad Epochs (2011, 2015, 2020, 2026)",
+    "Swipe Curtain",
+    "Blink Strobe",
+    "Change Pixels (True Raster Subtraction)"
+  ],
+  "verdict": "PASS"
+}

@@ -1,0 +1,10 @@
+{
+  "model_name": "BAAI/bge-small-en-v1.5",
+  "backend": "fastembed",
+  "embedding_dim": 384,
+  "n_features": 2000,
+  "normalized": true,
+  "generated_at": "2026-09-08T16:42:20.313861+00:00",
+  "embeddings_file": "data/vectors/embeddings.npy",
+  "index_file": "data/vectors/embedding_index.json"
+}

@@ -1,0 +1,83 @@
+{
+  "project": "GeoChronos",
+  "purpose": "Supporting execution and benchmark context for the Benchmark & Validation PDF",
+  "status": "prototype",
+  "execution_model": {
+    "runtime": "local/on-premises prototype",
+    "external_runtime_dependency": false,
+    "network_requirement_after_staging": "none intended for core runtime",
+    "orchestration_role": "query interpretation and workflow coordination",
+    "source_of_truth": "deterministic catalogue, retrieval, raster, temporal and verification services"
+  },
+  "pipeline": [
+    "analyst request",
+    "structured intent / constraints",
+    "metadata and spatial filtering",
+    "semantic retrieval",
+    "candidate ranking",
+    "targeted raster access",
+    "temporal analysis",
+    "verification",
+    "evidence / provenance assembly"
+  ],
+  "benchmark_operations": [
+    {
+      "name": "System Health Check",
+      "purpose": "Service reachability / runtime health",
+      "min_ms": 12,
+      "max_ms": 18
+    },
+    {
+      "name": "STAC Catalog Query",
+      "purpose": "Metadata discovery",
+      "min_ms": 35,
+      "max_ms": 90
+    },
+    {
+      "name": "Spatial Search (AOI)",
+      "purpose": "Geographic filtering",
+      "min_ms": 55,
+      "max_ms": 180
+    },
+    {
+      "name": "Feature Retrieval (Vector)",
+      "purpose": "Similarity / payload lookup",
+      "min_ms": 70,
+      "max_ms": 220
+    },
+    {
+      "name": "Temporal Analysis",
+      "purpose": "Selected-site temporal reconstruction",
+      "min_ms": 220,
+      "max_ms": 680
+    },
+    {
+      "name": "Cube Window Retrieval",
+      "purpose": "Targeted raster access",
+      "min_ms": 310,
+      "max_ms": 820
+    },
+    {
+      "name": "Full Intelligence Query",
+      "purpose": "End-to-end prototype path",
+      "min_ms": 350,
+      "max_ms": 1040
+    }
+  ],
+  "benchmark_interpretation": {
+    "unit": "milliseconds",
+    "reported_statistics": [
+      "minimum",
+      "maximum"
+    ],
+    "timing_boundary": "The measured operation boundary should be kept consistent across benchmark runs.",
+    "note": "Do not invent p50, p95, concurrency or throughput values unless separately measured."
+  },
+  "processing_principles": [
+    "candidate-first processing",
+    "bounded raster access",
+    "quality-aware temporal evidence",
+    "deterministic verification",
+    "traceable provenance"
+  ]
+}

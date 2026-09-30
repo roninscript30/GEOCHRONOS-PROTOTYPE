@@ -1,0 +1,67 @@
+{
+  "audit_name": "UI Baseline Workstation Verification",
+  "timestamp": "2026-09-09T05:33:25Z",
+  "workstation_title": "GeoChronos Earth Observation Intelligence Workstation",
+  "frontend_runtime": {
+    "framework": "Next.js 14.2 (App Router)",
+    "port": 3000,
+    "state_store": "Zustand (InvestigationStore)",
+    "query_client": "TanStack React Query v5",
+    "map_engine": "MapLibre GL JS (100% Air-Gapped Local Renderer)"
+  },
+  "verified_routes": {
+    "/": {
+      "http_status": 200,
+      "latency_ms": 129.63,
+      "healthy": true,
+      "html_bytes": 32545,
+      "contains_spectra": true
+    },
+    "/discover": {
+      "http_status": 200,
+      "latency_ms": 15.37,
+      "healthy": true,
+      "html_bytes": 24348,
+      "contains_spectra": true
+    },
+    "/raster": {
+      "http_status": 200,
+      "latency_ms": 16.53,
+      "healthy": true,
+      "html_bytes": 24456,
+      "contains_spectra": true
+    },
+    "/reports": {
+      "http_status": 200,
+      "latency_ms": 18.49,
+      "healthy": true,
+      "html_bytes": 40546,
+      "contains_spectra": true
+    },
+    "/settings": {
+      "http_status": 200,
+      "latency_ms": 14.61,
+      "healthy": true,
+      "html_bytes": 26190,
+      "contains_spectra": true
+    },
+    "/archive": {
+      "http_status": 200,
+      "latency_ms": 15.78,
+      "healthy": true,
+      "html_bytes": 28535,
+      "contains_spectra": true
+    }
+  },
+  "sidebar_audit": {
+    "system_tab_removed": true,
+    "nav_items": [
+      "Discover (/discover)",
+      "Raster Viewer (/raster)",
+      "Archive & History (/archive)",
+      "Investigation Dossier (/reports)",
+      "Subsystems Audit (/settings)"
+    ]
+  },
+  "verdict": "PASS"
+}

@@ -1,0 +1,53 @@
+{
+  "project": "GeoChronos",
+  "manifest_purpose": "Identity and scope of the dataset/index footprint behind the current benchmark and validation snapshot.",
+  "dataset_status": "controlled local prototype subset",
+  "spatial_reference": {
+    "primary_crs": "EPSG:32644",
+    "resolution_m": 10
+  },
+  "raster": {
+    "format": "Zarr",
+    "cube_name": "chennai.zarr",
+    "shape": [
+      4,
+      6,
+      5000,
+      3500
+    ],
+    "size_gb_approx": 1.06
+  },
+  "catalogue": {
+    "format": "STAC",
+    "item_count": 4,
+    "purpose": "spatiotemporal metadata and asset discovery"
+  },
+  "geospatial_features": {
+    "format": "GeoPackage",
+    "file_name": "features.gpkg",
+    "feature_count": 66603,
+    "class_count": 5
+  },
+  "semantic_vector_index": {
+    "engine": "Qdrant",
+    "collection": "geochronos_features",
+    "vector_count": 2000,
+    "dimension": 384
+  },
+  "local_evidence_artifacts": [
+    "dataset_manifest.json",
+    "validation_report.json",
+    "processing_log.json"
+  ],
+  "scope_notes": [
+    "The benchmark reflects the controlled local prototype footprint recorded for GeoChronos.",
+    "The dataset footprint should not be interpreted as a complete planetary EO archive.",
+    "The benchmark does not establish PB-scale performance."
+  ],
+  "technical_references": {
+    "STAC": "https://stacspec.org/en/",
+    "Zarr": "https://zarr.readthedocs.io/en/latest/",
+    "Xarray": "https://docs.xarray.dev/en/latest/",
+    "Qdrant": "https://qdrant.tech/documentation/search/"
+  }
+}

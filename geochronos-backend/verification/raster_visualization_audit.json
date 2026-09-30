@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-09-09T04:16:30Z",
+  "project": "GeoChronos",
+  "audit_type": "Raster Visualization & Zarr Slicing Audit",
+  "status": "VERIFIED",
+  "viewer_architecture": {
+    "scope": "Full Chennai Zarr Cube dataset viewer (UTM 400000..435000, 1420000..1470000)",
+    "location_presets_eliminated": true,
+    "single_year_selection": [2011, 2015, 2020, 2026],
+    "band_selection": {
+      "standard_presets": ["True Color (RGB)", "Color Infrared (CIR)", "SWIR Composite", "Agriculture"],
+      "custom_3_band_assignment": "User selects arbitrary bands for Red, Green, and Blue from 6 canonical channels",
+      "single_band_grayscale": "User selects any individual spectral band",
+      "spectral_indices": ["NDVI", "NDMI", "NDBI"]
+    },
+    "visual_switcher": {
+      "raster_visual": "Pure satellite reflectance image sliced from Zarr",
+      "hybrid_blend": "Satellite reflectance with overlaid vector boundaries and interactive opacity slider (10% to 100%)",
+      "vector_visual": "Derived vector polygon footprints from local feature store"
+    },
+    "dossier_integration": "Interactive 'ADD TO DOSSIER' button captures current dataset raster configuration and metadata directly into investigation store"
+  },
+  "additive_endpoints": {
+    "/api/raster/composite": {
+      "method": "POST",
+      "status": "HTTP 200",
+      "tested_modes": ["natural_color", "cir", "swir", "custom:nir,red,green", "single", "ndvi", "ndmi", "ndbi"],
+      "tested_epochs": [2011, 2015, 2020, 2026],
+      "output_format": "Base64 PNG with radiometric band statistics and STAC provenance",
+      "latency_ms": 290
+    }
+  }
+}

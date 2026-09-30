@@ -1,0 +1,301 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [],
+  "id": "chennai_2026",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          80.07845298852119,
+          12.843428963186303
+        ],
+        [
+          80.3998872564297,
+          12.843428963186303
+        ],
+        [
+          80.3998872564297,
+          13.296470990670317
+        ],
+        [
+          80.07845298852119,
+          13.296470990670317
+        ],
+        [
+          80.07845298852119,
+          12.843428963186303
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    80.07845298852119,
+    12.843428963186303,
+    80.3998872564297,
+    13.296470990670317
+  ],
+  "properties": {
+    "datetime": "2026-03-05T00:00:00Z",
+    "observation_id": "chennai_2026",
+    "year": 2026,
+    "source_platform": "Sentinel-2C",
+    "sensor": "Sentinel-2C MSI",
+    "product": "Sentinel-2 L2A",
+    "processing_level": "Level-2A (Bottom-Of-Atmosphere Surface Reflectance)",
+    "scene_id": "S2C_MSIL2A_20260305T045701_R119_T44PMV_20260305T102020",
+    "source_product_id": "S2C_MSIL2A_20260305T045701_R119_T44PMV_20260305T102020",
+    "acquisition_date": "2026-03-05",
+    "crs": "EPSG:32644",
+    "epsg": 32644,
+    "resolution_m": 10.0,
+    "width_px": 3500,
+    "height_px": 5000,
+    "bounds_utm": {
+      "left": 400000.0,
+      "bottom": 1420000.0,
+      "right": 435000.0,
+      "top": 1470000.0,
+      "unit": "metres"
+    },
+    "bounds_wgs84": {
+      "min_longitude": 80.076774,
+      "min_latitude": 12.843429,
+      "max_longitude": 80.400979,
+      "max_latitude": 13.296471
+    },
+    "zarr_time_index": 3,
+    "canonical_bands": [
+      "blue",
+      "green",
+      "red",
+      "nir",
+      "swir1",
+      "swir2"
+    ],
+    "geochronos_version": "0.1.0",
+    "geochronos_problem_id": "SIH26227"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "GeoChronos Chennai EO Catalog (SIH26227)"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "source_B01": {
+      "href": "./data-foundation/raw/2026/bands/B01.tif",
+      "type": "image/tiff; application=geotiff",
+      "title": "Source raster: B01 (coastal)",
+      "common_name": "coastal",
+      "wavelength_nm": 443.9,
+      "native_resolution": "60m",
+      "data_type": "uint16",
+      "roles": [
+        "data",
+        "source"
+      ]
+    },
+    "source_B06": {
+      "href": "./data-foundation/raw/2026/bands/B06.tif",
+      "type": "image/tiff; application=geotiff",
+      "title": "Source raster: B06 (rededge2)",
+      "common_name": "rededge2",
+      "wavelength_nm": 740.5,
+      "native_resolution": "20m",
+      "data_type": "uint16",
+      "roles": [
+        "data",
+        "source"
+      ]
+    },
+    "source_B05": {
+      "href": "./data-foundation/raw/2026/bands/B05.tif",
+      "type": "image/tiff; application=geotiff",
+      "title": "Source raster: B05 (rededge1)",
+      "common_name": "rededge1",
+      "wavelength_nm": 704.1,
+      "native_resolution": "20m",
+      "data_type": "uint16",
+      "roles": [
+        "data",
+        "source"
+      ]
+    },
+    "source_B07": {
+      "href": "./data-foundation/raw/2026/bands/B07.tif",
+      "type": "image/tiff; application=geotiff",
+      "title": "Source raster: B07 (rededge3)",
+      "common_name": "rededge3",
+      "wavelength_nm": 782.8,
+      "native_resolution": "20m",
+      "data_type": "uint16",
+      "roles": [
+        "data",
+        "source"
+      ]
+    },
+    "source_B09": {
+      "href": "./data-foundation/raw/2026/bands/B09.tif",
+      "type": "image/tiff; application=geotiff",
+      "title": "Source raster: B09 (water_vapor)",
+      "common_name": "water_vapor",
+      "wavelength_nm": 945.1,
+      "native_resolution": "60m",
+      "data_type": "uint16",
+      "roles": [
+        "data",
+        "source"
+      ]
+    },
+    "source_B8A": {
+      "href": "./data-foundation/raw/2026/bands/B8A.tif",
+      "type": "image/tiff; application=geotiff",
+      "title": "Source raster: B8A (nir_narrow)",
+      "common_name": "nir_narrow",
+      "wavelength_nm": 864.7,
+      "native_resolution": "20m",
+      "data_type": "uint16",
+      "roles": [
+        "data",
+        "source"
+      ]
+    },
+    "source_B04": {
+      "href": "./data-foundation/raw/2026/bands/B04.tif",
+      "type": "image/tiff; application=geotiff",
+      "title": "Source raster: B04 (red)",
+      "common_name": "red",
+      "wavelength_nm": 664.6,
+      "native_resolution": "10m",
+      "data_type": "uint16",
+      "roles": [
+        "data",
+        "source"
+      ]
+    },
+    "source_B02": {
+      "href": "./data-foundation/raw/2026/bands/B02.tif",
+      "type": "image/tiff; application=geotiff",
+      "title": "Source raster: B02 (blue)",
+      "common_name": "blue",
+      "wavelength_nm": 492.4,
+      "native_resolution": "10m",
+      "data_type": "uint16",
+      "roles": [
+        "data",
+        "source"
+      ]
+    },
+    "source_B11": {
+      "href": "./data-foundation/raw/2026/bands/B11.tif",
+      "type": "image/tiff; application=geotiff",
+      "title": "Source raster: B11 (swir1)",
+      "common_name": "swir1",
+      "wavelength_nm": 1613.7,
+      "native_resolution": "20m",
+      "data_type": "uint16",
+      "roles": [
+        "data",
+        "source"
+      ]
+    },
+    "source_B12": {
+      "href": "./data-foundation/raw/2026/bands/B12.tif",
+      "type": "image/tiff; application=geotiff",
+      "title": "Source raster: B12 (swir2)",
+      "common_name": "swir2",
+      "wavelength_nm": 2202.4,
+      "native_resolution": "20m",
+      "data_type": "uint16",
+      "roles": [
+        "data",
+        "source"
+      ]
+    },
+    "source_B08": {
+      "href": "./data-foundation/raw/2026/bands/B08.tif",
+      "type": "image/tiff; application=geotiff",
+      "title": "Source raster: B08 (nir)",
+      "common_name": "nir",
+      "wavelength_nm": 832.8,
+      "native_resolution": "10m",
+      "data_type": "uint16",
+      "roles": [
+        "data",
+        "source"
+      ]
+    },
+    "source_B03": {
+      "href": "./data-foundation/raw/2026/bands/B03.tif",
+      "type": "image/tiff; application=geotiff",
+      "title": "Source raster: B03 (green)",
+      "common_name": "green",
+      "wavelength_nm": 559.8,
+      "native_resolution": "10m",
+      "data_type": "uint16",
+      "roles": [
+        "data",
+        "source"
+      ]
+    },
+    "standardized_raster": {
+      "href": "./data-foundation/standardized/chennai_2026/standardized.tif",
+      "type": "image/tiff; application=geotiff",
+      "title": "Standardised 6-band GeoTIFF (float32)",
+      "bands": [
+        "blue",
+        "green",
+        "red",
+        "nir",
+        "swir1",
+        "swir2"
+      ],
+      "roles": [
+        "data",
+        "standardized"
+      ]
+    },
+    "normalized_raster": {
+      "href": "./data-foundation/standardized/normalized/chennai_2026/normalized.tif",
+      "type": "image/tiff; application=geotiff",
+      "title": "Normalised 6-band GeoTIFF (float32)",
+      "bands": [
+        "blue",
+        "green",
+        "red",
+        "nir",
+        "swir1",
+        "swir2"
+      ],
+      "roles": [
+        "data",
+        "normalized"
+      ]
+    },
+    "zarr_reference": {
+      "href": "./data-foundation/cube/chennai.zarr",
+      "type": "application/vnd+zarr",
+      "title": "Zarr spatiotemporal data cube",
+      "zarr_time_index": 3,
+      "roles": [
+        "data",
+        "zarr"
+      ]
+    }
+  },
+  "collection": "geochronos_chennai_observations"
+}

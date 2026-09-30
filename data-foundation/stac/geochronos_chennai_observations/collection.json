@@ -1,0 +1,61 @@
+{
+  "type": "Collection",
+  "id": "geochronos_chennai_observations",
+  "stac_version": "1.1.0",
+  "description": "Chennai multi-temporal Earth Observation dataset 2011-2026",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "GeoChronos Chennai EO Catalog (SIH26227)"
+    },
+    {
+      "rel": "item",
+      "href": "./chennai_2011/chennai_2011.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./chennai_2015/chennai_2015.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./chennai_2020/chennai_2020.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./chennai_2026/chennai_2026.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "GeoChronos Chennai EO Catalog (SIH26227)"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2011-01-01T00:00:00Z",
+          "2026-12-31T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "proprietary"
+}

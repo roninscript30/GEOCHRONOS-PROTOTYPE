@@ -1,0 +1,23 @@
+{
+  "audit_name": "Raster Visualization Pipeline Audit",
+  "timestamp": "2026-09-09T05:33:26Z",
+  "full_extent_composite": {
+    "http_status": 200,
+    "latency_ms": 1063.03,
+    "stepped_subsampling_active": true,
+    "image_data_uri_valid": true,
+    "image_bytes_estimate": 1211778
+  },
+  "multi_epoch_crops": {
+    "http_status": 404,
+    "latency_ms": 2.76,
+    "epochs_returned": [],
+    "all_epochs_valid": false
+  },
+  "encoding_bug_resolution": {
+    "root_cause": "Backend returned data:image/png;base64,... which frontend wrapped in template literal producing duplicate data URI prefixes",
+    "resolution": "Applied normalizeImageSrc() across MapLibreView, ComparisonMap, SiteDetail, Discover, RasterViewer, Reports, RasterEvidenceViewer",
+    "status": "PASS"
+  },
+  "verdict": "FAIL"
+}

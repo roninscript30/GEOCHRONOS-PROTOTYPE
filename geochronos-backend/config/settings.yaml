@@ -1,0 +1,29 @@
+server:
+  host: "127.0.0.1"
+  port: 8000
+  debug: false
+  log_level: "INFO"
+
+storage:
+  data_dir: "./data-foundation"
+  zarr_cube_path: "./data-foundation/cube/chennai.zarr"
+  stac_catalog_path: "./data-foundation/stac/catalog.json"
+  features_gpkg_path: "./data-foundation/vectors/features.gpkg"
+  vector_db_path: "./data-foundation/vector_db"
+  vector_collection_name: "geochronos_features"
+  metadata_dir: "./Benchmarks"
+
+omniroute:
+  base_url: "http://127.0.0.1:20128/v1"
+  model: "claude-sonnet-4-6"
+  api_key: "sk-geochronos-local-omniroute"
+  temperature: 0.0
+  max_tokens: 1024
+  timeout: 30.0
+
+analysis:
+  iou_threshold: 0.55
+  centroid_distance_threshold: 12.0
+  area_similarity_threshold: 0.75
+  default_top_k: 8
+  max_window_size: 512

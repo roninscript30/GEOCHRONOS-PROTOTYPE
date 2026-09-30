@@ -1,0 +1,58 @@
+{
+  "observation_id": "chennai_2026",
+  "standardized_at": "2026-09-08T14:24:37.564126+00:00",
+  "steps": [
+    {
+      "step": "band_selection",
+      "selected_bands": [
+        "blue",
+        "green",
+        "red",
+        "nir",
+        "swir1",
+        "swir2"
+      ],
+      "sources": {
+        "blue": "raster-dataset/2026/bands/B02.tif",
+        "green": "raster-dataset/2026/bands/B03.tif",
+        "red": "raster-dataset/2026/bands/B04.tif",
+        "nir": "raster-dataset/2026/bands/B08.tif",
+        "swir1": "raster-dataset/2026/bands/B11.tif",
+        "swir2": "raster-dataset/2026/bands/B12.tif"
+      }
+    },
+    {
+      "step": "dtype_cast",
+      "source_dtype": "uint16",
+      "output_dtype": "float32"
+    },
+    {
+      "step": "nodata_normalisation",
+      "source_nodata": 0,
+      "output_nodata": 0.0,
+      "strategy": "zero_pixels_remain_zero"
+    },
+    {
+      "step": "grid_check",
+      "action": "no_reprojection_needed",
+      "reason": "observation already matches canonical grid"
+    },
+    {
+      "step": "write",
+      "output_path": "data/standardized/chennai_2026/standardized.tif",
+      "shape": [
+        6,
+        5000,
+        3500
+      ]
+    }
+  ],
+  "band_sources": {
+    "blue": "raster-dataset/2026/bands/B02.tif",
+    "green": "raster-dataset/2026/bands/B03.tif",
+    "red": "raster-dataset/2026/bands/B04.tif",
+    "nir": "raster-dataset/2026/bands/B08.tif",
+    "swir1": "raster-dataset/2026/bands/B11.tif",
+    "swir2": "raster-dataset/2026/bands/B12.tif"
+  }
+}

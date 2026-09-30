@@ -1,0 +1,34 @@
+{
+  "audit_name": "UI Data Integrity and Evidence Disambiguation Audit",
+  "timestamp": "2026-09-09T05:33:25Z",
+  "canonical_stac_items": [
+    "chennai_2011",
+    "chennai_2015",
+    "chennai_2020",
+    "chennai_2026"
+  ],
+  "surface_area_calculation": {
+    "tested_feature": "water_body_2026_000000",
+    "area_m2": 4300.0,
+    "status": "PASS - Real Calculated Area Available"
+  },
+  "confidence_disambiguation": {
+    "model_detection_confidence": "Analytical model score [0.0 - 1.0], e.g. 94.2%",
+    "evidence_grounding": "Authoritative Zarr surface reflectance and STAC Item provenance",
+    "analyst_verification": "Human investigative review state in dossier: Confirmed / Unverified"
+  },
+  "temporal_correspondence_semantics": {
+    "identity_preservation": "No persistent identity assumed across epochs; matched by spatial intersection & spectral distance",
+    "table_headers": [
+      "Epoch",
+      "Matched Observation",
+      "Temporal Counterpart",
+      "Sensor / Platform",
+      "Detection Confidence",
+      "Surface Area",
+      "GeoChronosl Distance (\u0394S)",
+      "Dynamics Status"
+    ]
+  },
+  "verdict": "PASS"
+}

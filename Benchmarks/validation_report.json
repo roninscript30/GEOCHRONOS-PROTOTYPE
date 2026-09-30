@@ -1,0 +1,49 @@
+{
+  "report": {
+    "name": "GeoChronos Benchmark Validation Report",
+    "project": "GeoChronos",
+    "problem_statement": "PS-26227",
+    "problem_title": "Semantic Retrieval and Multi-Temporal Change Analysis of Satellite Imagery",
+    "event": "Smart India Hackathon 2026",
+    "team": "The Chaotics",
+    "status": "prototype_validation_snapshot",
+    "important_boundary": "These values describe the current local prototype snapshot and are not publication-grade production benchmarks."
+  },
+  "functional_validation": {
+    "tests_passed": 18,
+    "tests_total": 18,
+    "pass_rate_percent": 100,
+    "interpretation": "All tests in the recorded prototype validation run passed."
+  },
+  "api_validation": {
+    "live_endpoints_http_200": 18,
+    "live_endpoints_total": 18,
+    "interpretation": "All recorded live endpoints returned HTTP 200 during the validation snapshot."
+  },
+  "data_validation": {
+    "zarr_cube_size_gb": 1.06,
+    "zarr_shape": [
+      4,
+      6,
+      5000,
+      3500
+    ],
+    "zarr_resolution_m": 10,
+    "zarr_crs": "EPSG:32644",
+    "geopackage_feature_count": 66603,
+    "qdrant_vector_count": 2000,
+    "qdrant_embedding_dimension": 384,
+    "zarr_api_checked_numeric_difference": 0.0,
+    "zarr_api_numeric_difference_scope": "Checked value path only; not a universal assertion over every possible request."
+  },
+  "representative_intelligence_validation": {
+    "query": "Which buildings appeared between 2020 and 2026?",
+    "verified_appearance_events": 2,
+    "interpretation": "The tested local intelligence path returned two grounded appearance events for this representative query."
+  },
+  "evidence_files": [
+    "validation_report.json",
+    "processing_log.json",
+    "dataset_manifest.json"
+  ]
+}

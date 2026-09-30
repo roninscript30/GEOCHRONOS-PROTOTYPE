@@ -1,0 +1,53 @@
+{
+  "audit_name": "Air-Gapped Map Pipeline Audit",
+  "timestamp": "2026-09-09T05:33:26Z",
+  "air_gapped_verification": {
+    "cartocdn_removed": true,
+    "openstreetmap_removed": true,
+    "external_tiles_active": false,
+    "tile_dependencies": "0 external network endpoints"
+  },
+  "local_basemap_architecture": {
+    "background_layer": "Dark canvas (#08080a)",
+    "graticules_layer": "Tactical GIS latitude/longitude graticules (EPSG:4326)",
+    "raster_imagery_layer": "Native Zarr EPSG:32644 bounding image composite rendered directly via MapLibre image source",
+    "vector_polygon_layer": "Extracted GeoJSON footprints styled by feature class"
+  },
+  "bounds": {
+    "crs_native": "EPSG:32644",
+    "bounds_native": {
+      "left": 400000.0,
+      "bottom": 1420000.0,
+      "right": 435000.0,
+      "top": 1470000.0
+    },
+    "crs_display": "EPSG:4326",
+    "bounds_display": {
+      "min_lon": 80.07845298852119,
+      "min_lat": 12.843428963186303,
+      "max_lon": 80.3998872564297,
+      "max_lat": 13.296470990670317
+    },
+    "center_display": {
+      "lon": 80.23917012247544,
+      "lat": 13.06994997692831
+    },
+    "resolution_m": 10.0,
+    "time_values": [
+      2011,
+      2015,
+      2020,
+      2026
+    ],
+    "canonical_bands": [
+      "blue",
+      "green",
+      "red",
+      "nir",
+      "swir1",
+      "swir2"
+    ]
+  },
+  "features_loaded": 30,
+  "verdict": "PASS"
+}

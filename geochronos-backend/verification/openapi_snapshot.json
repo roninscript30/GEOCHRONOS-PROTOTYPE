@@ -1,0 +1,2062 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "GeoChronos Application API",
+    "description": "Production-quality local FastAPI backend integrating GeoChronos Data Foundation and GeoChronos Intelligence Engine for air-gapped Earth Observation analytics (SIH26227).",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "summary": "Health Check",
+        "operationId": "health_check_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health/dependencies": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "summary": "Health Dependencies",
+        "operationId": "health_dependencies_health_dependencies_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Health Dependencies Health Dependencies Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/query": {
+      "post": {
+        "tags": [
+          "Query"
+        ],
+        "summary": "Execute Query",
+        "operationId": "execute_query_api_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/features": {
+      "get": {
+        "tags": [
+          "Features"
+        ],
+        "summary": "List Features",
+        "operationId": "list_features_api_features_get",
+        "parameters": [
+          {
+            "name": "feature_class",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Feature class filter",
+              "title": "Feature Class"
+            },
+            "description": "Feature class filter"
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Year filter (2011, 2015, 2020, 2026)",
+              "title": "Year"
+            },
+            "description": "Year filter (2011, 2015, 2020, 2026)"
+          },
+          {
+            "name": "observation_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Observation ID filter",
+              "title": "Observation Id"
+            },
+            "description": "Observation ID filter"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 500,
+              "minimum": 1,
+              "default": 50,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          },
+          {
+            "name": "include_geojson",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "description": "Whether to include GeoJSON FeatureCollection",
+              "default": false,
+              "title": "Include Geojson"
+            },
+            "description": "Whether to include GeoJSON FeatureCollection"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FeatureListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/features/{feature_id}": {
+      "get": {
+        "tags": [
+          "Features"
+        ],
+        "summary": "Get Feature",
+        "operationId": "get_feature_api_features__feature_id__get",
+        "parameters": [
+          {
+            "name": "feature_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Feature Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Get Feature Api Features  Feature Id  Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/features/{feature_id}/history": {
+      "get": {
+        "tags": [
+          "Features"
+        ],
+        "summary": "Get Feature History",
+        "operationId": "get_feature_history_api_features__feature_id__history_get",
+        "parameters": [
+          {
+            "name": "feature_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Feature Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FeatureHistoryResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/temporal/analyze": {
+      "post": {
+        "tags": [
+          "Temporal Analysis"
+        ],
+        "summary": "Analyze Temporal",
+        "operationId": "analyze_temporal_api_temporal_analyze_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TemporalAnalysisRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TemporalAnalysisResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/temporal/compare": {
+      "post": {
+        "tags": [
+          "Temporal Analysis"
+        ],
+        "summary": "Compare Temporal",
+        "operationId": "compare_temporal_api_temporal_compare_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TemporalCompareRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Compare Temporal Api Temporal Compare Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/map/bounds": {
+      "get": {
+        "tags": [
+          "Map"
+        ],
+        "summary": "Get Map Bounds",
+        "operationId": "get_map_bounds_api_map_bounds_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MapBoundsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/map/features": {
+      "get": {
+        "tags": [
+          "Map"
+        ],
+        "summary": "Get Map Features",
+        "operationId": "get_map_features_api_map_features_get",
+        "parameters": [
+          {
+            "name": "feature_class",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Feature class filter",
+              "title": "Feature Class"
+            },
+            "description": "Feature class filter"
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Year (2011, 2015, 2020, 2026)",
+              "default": 2026,
+              "title": "Year"
+            },
+            "description": "Year (2011, 2015, 2020, 2026)"
+          },
+          {
+            "name": "min_lon",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Bounding box min longitude (WGS84)",
+              "title": "Min Lon"
+            },
+            "description": "Bounding box min longitude (WGS84)"
+          },
+          {
+            "name": "min_lat",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Bounding box min latitude (WGS84)",
+              "title": "Min Lat"
+            },
+            "description": "Bounding box min latitude (WGS84)"
+          },
+          {
+            "name": "max_lon",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Bounding box max longitude (WGS84)",
+              "title": "Max Lon"
+            },
+            "description": "Bounding box max longitude (WGS84)"
+          },
+          {
+            "name": "max_lat",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Bounding box max latitude (WGS84)",
+              "title": "Max Lat"
+            },
+            "description": "Bounding box max latitude (WGS84)"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 1000,
+              "minimum": 1,
+              "default": 200,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeoJSONFeatureCollection"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/map/feature/{feature_id}": {
+      "get": {
+        "tags": [
+          "Map"
+        ],
+        "summary": "Get Single Feature Geojson",
+        "operationId": "get_single_feature_geojson_api_map_feature__feature_id__get",
+        "parameters": [
+          {
+            "name": "feature_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Feature Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeoJSONFeature"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/cube/info": {
+      "get": {
+        "tags": [
+          "Data Cube"
+        ],
+        "summary": "Get Cube Info",
+        "operationId": "get_cube_info_api_cube_info_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CubeInfoResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/cube/window": {
+      "post": {
+        "tags": [
+          "Data Cube"
+        ],
+        "summary": "Get Cube Window",
+        "operationId": "get_cube_window_api_cube_window_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CubeWindowRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CubeWindowResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/cube/spectral-profile": {
+      "post": {
+        "tags": [
+          "Data Cube"
+        ],
+        "summary": "Get GeoChronosl Profile",
+        "operationId": "get_spectral_profile_api_cube_spectral_profile_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GeoChronoslProfileRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeoChronoslProfileResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/cube/temporal-profile": {
+      "post": {
+        "tags": [
+          "Data Cube"
+        ],
+        "summary": "Get Temporal Profile",
+        "operationId": "get_temporal_profile_api_cube_temporal_profile_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TemporalProfileRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TemporalProfileResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/evidence/{feature_id}": {
+      "get": {
+        "tags": [
+          "Evidence & Provenance"
+        ],
+        "summary": "Get Feature Evidence",
+        "operationId": "get_feature_evidence_api_evidence__feature_id__get",
+        "parameters": [
+          {
+            "name": "feature_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Feature Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EvidenceResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/provenance/{feature_id}": {
+      "get": {
+        "tags": [
+          "Evidence & Provenance"
+        ],
+        "summary": "Get Feature Provenance",
+        "operationId": "get_feature_provenance_api_provenance__feature_id__get",
+        "parameters": [
+          {
+            "name": "feature_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Feature Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProvenanceResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CubeInfoResponse": {
+        "properties": {
+          "dataset_id": {
+            "type": "string",
+            "title": "Dataset Id"
+          },
+          "project": {
+            "type": "string",
+            "title": "Project"
+          },
+          "study_area": {
+            "type": "string",
+            "title": "Study Area"
+          },
+          "crs": {
+            "type": "string",
+            "title": "Crs"
+          },
+          "resolution_m": {
+            "type": "number",
+            "title": "Resolution M"
+          },
+          "dimensions": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "Dimensions"
+          },
+          "coordinates": {
+            "additionalProperties": {
+              "items": {},
+              "type": "array"
+            },
+            "type": "object",
+            "title": "Coordinates"
+          },
+          "variables": {
+            "additionalProperties": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "object",
+            "title": "Variables"
+          },
+          "bounds": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Bounds"
+          },
+          "attributes": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Attributes"
+          }
+        },
+        "type": "object",
+        "required": [
+          "dataset_id",
+          "project",
+          "study_area",
+          "crs",
+          "resolution_m",
+          "dimensions",
+          "coordinates",
+          "variables",
+          "bounds",
+          "attributes"
+        ],
+        "title": "CubeInfoResponse"
+      },
+      "CubeWindowRequest": {
+        "properties": {
+          "year": {
+            "type": "integer",
+            "title": "Year",
+            "description": "Observation year (2011, 2015, 2020, 2026)",
+            "default": 2026
+          },
+          "bands": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bands",
+            "description": "Bands to extract. Default: all canonical bands"
+          },
+          "min_x": {
+            "type": "number",
+            "title": "Min X",
+            "description": "Min X (UTM Easting in meters or Lon if crs=EPSG:4326)"
+          },
+          "min_y": {
+            "type": "number",
+            "title": "Min Y",
+            "description": "Min Y (UTM Northing in meters or Lat if crs=EPSG:4326)"
+          },
+          "max_x": {
+            "type": "number",
+            "title": "Max X",
+            "description": "Max X (UTM Easting in meters or Lon if crs=EPSG:4326)"
+          },
+          "max_y": {
+            "type": "number",
+            "title": "Max Y",
+            "description": "Max Y (UTM Northing in meters or Lat if crs=EPSG:4326)"
+          },
+          "crs": {
+            "type": "string",
+            "title": "Crs",
+            "description": "CRS of input bounds ('EPSG:32644' or 'EPSG:4326')",
+            "default": "EPSG:32644"
+          }
+        },
+        "type": "object",
+        "required": [
+          "min_x",
+          "min_y",
+          "max_x",
+          "max_y"
+        ],
+        "title": "CubeWindowRequest"
+      },
+      "CubeWindowResponse": {
+        "properties": {
+          "year": {
+            "type": "integer",
+            "title": "Year"
+          },
+          "bands": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Bands"
+          },
+          "shape": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Shape"
+          },
+          "crs": {
+            "type": "string",
+            "title": "Crs"
+          },
+          "bounds": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Bounds"
+          },
+          "statistics": {
+            "additionalProperties": {
+              "additionalProperties": {
+                "type": "number"
+              },
+              "type": "object"
+            },
+            "type": "object",
+            "title": "Statistics"
+          },
+          "data_preview": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "items": {
+                    "items": {
+                      "type": "number"
+                    },
+                    "type": "array"
+                  },
+                  "type": "array"
+                },
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Data Preview"
+          }
+        },
+        "type": "object",
+        "required": [
+          "year",
+          "bands",
+          "shape",
+          "crs",
+          "bounds",
+          "statistics"
+        ],
+        "title": "CubeWindowResponse"
+      },
+      "DependencyHealth": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "healthy",
+              "degraded",
+              "unhealthy"
+            ],
+            "title": "Status"
+          },
+          "details": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Details"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status"
+        ],
+        "title": "DependencyHealth"
+      },
+      "EvidenceResponse": {
+        "properties": {
+          "feature_id": {
+            "type": "string",
+            "title": "Feature Id"
+          },
+          "feature_class": {
+            "type": "string",
+            "title": "Feature Class"
+          },
+          "year": {
+            "type": "integer",
+            "title": "Year"
+          },
+          "observation_id": {
+            "type": "string",
+            "title": "Observation Id"
+          },
+          "confidence": {
+            "type": "number",
+            "title": "Confidence"
+          },
+          "stac_item": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Stac Item"
+          },
+          "source_raster": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Source Raster"
+          },
+          "zarr_reference": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Zarr Reference"
+          },
+          "spatial_evidence": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Spatial Evidence"
+          },
+          "geometry_geojson": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GeoJSONFeature"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "feature_id",
+          "feature_class",
+          "year",
+          "observation_id",
+          "confidence",
+          "stac_item",
+          "source_raster",
+          "zarr_reference",
+          "spatial_evidence"
+        ],
+        "title": "EvidenceResponse"
+      },
+      "FeatureHistoryResponse": {
+        "properties": {
+          "feature_id": {
+            "type": "string",
+            "title": "Feature Id"
+          },
+          "feature_class": {
+            "type": "string",
+            "title": "Feature Class"
+          },
+          "history": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "History"
+          },
+          "total_observations": {
+            "type": "integer",
+            "title": "Total Observations"
+          }
+        },
+        "type": "object",
+        "required": [
+          "feature_id",
+          "feature_class",
+          "history",
+          "total_observations"
+        ],
+        "title": "FeatureHistoryResponse"
+      },
+      "FeatureItem": {
+        "properties": {
+          "feature_id": {
+            "type": "string",
+            "title": "Feature Id"
+          },
+          "feature_class": {
+            "type": "string",
+            "title": "Feature Class"
+          },
+          "year": {
+            "type": "integer",
+            "title": "Year"
+          },
+          "observation_id": {
+            "type": "string",
+            "title": "Observation Id"
+          },
+          "confidence": {
+            "type": "number",
+            "title": "Confidence"
+          },
+          "source_item_id": {
+            "type": "string",
+            "title": "Source Item Id"
+          },
+          "cube_time_index": {
+            "type": "integer",
+            "title": "Cube Time Index"
+          },
+          "area_m2": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Area M2"
+          },
+          "attributes": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Attributes"
+          }
+        },
+        "type": "object",
+        "required": [
+          "feature_id",
+          "feature_class",
+          "year",
+          "observation_id",
+          "confidence",
+          "source_item_id",
+          "cube_time_index"
+        ],
+        "title": "FeatureItem"
+      },
+      "FeatureListResponse": {
+        "properties": {
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          },
+          "offset": {
+            "type": "integer",
+            "title": "Offset"
+          },
+          "limit": {
+            "type": "integer",
+            "title": "Limit"
+          },
+          "features": {
+            "items": {
+              "$ref": "#/components/schemas/FeatureItem"
+            },
+            "type": "array",
+            "title": "Features"
+          },
+          "geojson": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GeoJSONFeatureCollection"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "total",
+          "offset",
+          "limit",
+          "features"
+        ],
+        "title": "FeatureListResponse"
+      },
+      "GeoJSONFeature": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "Feature",
+            "title": "Type",
+            "default": "Feature"
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/GeoJSONGeometry"
+          },
+          "properties": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Properties"
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "geometry"
+        ],
+        "title": "GeoJSONFeature"
+      },
+      "GeoJSONFeatureCollection": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "FeatureCollection",
+            "title": "Type",
+            "default": "FeatureCollection"
+          },
+          "features": {
+            "items": {
+              "$ref": "#/components/schemas/GeoJSONFeature"
+            },
+            "type": "array",
+            "title": "Features"
+          },
+          "total_features": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Features"
+          },
+          "crs": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Crs"
+          }
+        },
+        "type": "object",
+        "title": "GeoJSONFeatureCollection"
+      },
+      "GeoJSONGeometry": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "coordinates": {
+            "title": "Coordinates"
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "coordinates"
+        ],
+        "title": "GeoJSONGeometry"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HealthResponse": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "healthy",
+              "degraded",
+              "unhealthy"
+            ],
+            "title": "Status"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version",
+            "default": "0.1.0"
+          },
+          "project": {
+            "type": "string",
+            "title": "Project",
+            "default": "GeoChronos"
+          },
+          "phase": {
+            "type": "string",
+            "title": "Phase",
+            "default": "Phase 3 - Backend Integration"
+          },
+          "dependencies": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/DependencyHealth"
+            },
+            "type": "object",
+            "title": "Dependencies"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status"
+        ],
+        "title": "HealthResponse"
+      },
+      "MapBoundsResponse": {
+        "properties": {
+          "crs_native": {
+            "type": "string",
+            "title": "Crs Native",
+            "default": "EPSG:32644"
+          },
+          "bounds_native": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Bounds Native"
+          },
+          "crs_display": {
+            "type": "string",
+            "title": "Crs Display",
+            "default": "EPSG:4326"
+          },
+          "bounds_display": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Bounds Display"
+          },
+          "center_display": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Center Display"
+          },
+          "resolution_m": {
+            "type": "number",
+            "title": "Resolution M"
+          },
+          "time_values": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Time Values"
+          },
+          "canonical_bands": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Canonical Bands"
+          }
+        },
+        "type": "object",
+        "required": [
+          "bounds_native",
+          "bounds_display",
+          "center_display",
+          "resolution_m",
+          "time_values",
+          "canonical_bands"
+        ],
+        "title": "MapBoundsResponse"
+      },
+      "ProvenanceResponse": {
+        "properties": {
+          "feature_id": {
+            "type": "string",
+            "title": "Feature Id"
+          },
+          "pipeline": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Pipeline"
+          },
+          "source_observation": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Source Observation"
+          },
+          "datacube_location": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Datacube Location"
+          },
+          "vector_derivation": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Vector Derivation"
+          },
+          "embedding_provenance": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Embedding Provenance"
+          }
+        },
+        "type": "object",
+        "required": [
+          "feature_id",
+          "pipeline",
+          "source_observation",
+          "datacube_location",
+          "vector_derivation",
+          "embedding_provenance"
+        ],
+        "title": "ProvenanceResponse"
+      },
+      "QueryRequest": {
+        "properties": {
+          "query": {
+            "type": "string",
+            "title": "Query",
+            "description": "Natural language geospatial query",
+            "example": "Show water bodies that disappeared between 2011 and 2026"
+          },
+          "limit": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 100.0,
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Limit",
+            "default": 8
+          },
+          "include_geojson": {
+            "type": "boolean",
+            "title": "Include Geojson",
+            "description": "Whether to include full GeoJSON FeatureCollection in response",
+            "default": true
+          },
+          "use_llm": {
+            "type": "boolean",
+            "title": "Use Llm",
+            "description": "Whether to invoke local OmniRoute interpreter/synthesizer",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "query"
+        ],
+        "title": "QueryRequest"
+      },
+      "QueryResponse": {
+        "properties": {
+          "query": {
+            "type": "string",
+            "title": "Query"
+          },
+          "structured_query": {
+            "$ref": "#/components/schemas/StructuredQuerySchema"
+          },
+          "answer": {
+            "type": "string",
+            "title": "Answer"
+          },
+          "synthesis_mode": {
+            "type": "string",
+            "title": "Synthesis Mode",
+            "description": "Synthesis mode: 'llm_generated' or 'deterministic_grounded'",
+            "default": "deterministic_grounded"
+          },
+          "llm_generated": {
+            "type": "boolean",
+            "title": "Llm Generated",
+            "description": "True if response text was synthesized via OmniRoute LLM",
+            "default": false
+          },
+          "summary_statistics": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Summary Statistics"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Limitations"
+          },
+          "provenance": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Provenance"
+          },
+          "geojson": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GeoJSONFeatureCollection"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "results_count": {
+            "type": "integer",
+            "title": "Results Count",
+            "default": 0
+          }
+        },
+        "type": "object",
+        "required": [
+          "query",
+          "structured_query",
+          "answer"
+        ],
+        "title": "QueryResponse"
+      },
+      "GeoChronoslProfileRequest": {
+        "properties": {
+          "x": {
+            "type": "number",
+            "title": "X",
+            "description": "X coordinate (UTM Easting or Lon)"
+          },
+          "y": {
+            "type": "number",
+            "title": "Y",
+            "description": "Y coordinate (UTM Northing or Lat)"
+          },
+          "crs": {
+            "type": "string",
+            "title": "Crs",
+            "default": "EPSG:32644"
+          },
+          "year": {
+            "type": "integer",
+            "title": "Year",
+            "default": 2026
+          }
+        },
+        "type": "object",
+        "required": [
+          "x",
+          "y"
+        ],
+        "title": "GeoChronoslProfileRequest"
+      },
+      "GeoChronoslProfileResponse": {
+        "properties": {
+          "year": {
+            "type": "integer",
+            "title": "Year"
+          },
+          "x": {
+            "type": "number",
+            "title": "X"
+          },
+          "y": {
+            "type": "number",
+            "title": "Y"
+          },
+          "crs": {
+            "type": "string",
+            "title": "Crs"
+          },
+          "spectral_profile": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "GeoChronosl Profile"
+          }
+        },
+        "type": "object",
+        "required": [
+          "year",
+          "x",
+          "y",
+          "crs",
+          "spectral_profile"
+        ],
+        "title": "GeoChronoslProfileResponse"
+      },
+      "StructuredQuerySchema": {
+        "properties": {
+          "intent": {
+            "type": "string",
+            "title": "Intent"
+          },
+          "feature_class": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Feature Class"
+          },
+          "location": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Location"
+          },
+          "semantic_query": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Semantic Query"
+          },
+          "start_year": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Start Year"
+          },
+          "end_year": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "End Year"
+          },
+          "reference_year": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reference Year"
+          },
+          "operation": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Operation"
+          },
+          "filters": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Filters"
+          },
+          "limit": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Limit"
+          }
+        },
+        "type": "object",
+        "required": [
+          "intent"
+        ],
+        "title": "StructuredQuerySchema"
+      },
+      "TemporalAnalysisRequest": {
+        "properties": {
+          "feature_class": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Feature Class",
+            "description": "Class of feature, e.g. water_body, vegetation, urban_area"
+          },
+          "from_year": {
+            "type": "integer",
+            "title": "From Year",
+            "description": "Base comparison year",
+            "default": 2011
+          },
+          "to_year": {
+            "type": "integer",
+            "title": "To Year",
+            "description": "Target comparison year",
+            "default": 2026
+          },
+          "location": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Location",
+            "description": "Optional spatial area or locality"
+          },
+          "intent": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Intent",
+            "description": "Change intent (e.g. feature_change, feature_disappearance, feature_appearance)",
+            "default": "feature_change"
+          },
+          "limit": {
+            "type": "integer",
+            "maximum": 500.0,
+            "minimum": 1.0,
+            "title": "Limit",
+            "default": 20
+          }
+        },
+        "type": "object",
+        "title": "TemporalAnalysisRequest"
+      },
+      "TemporalAnalysisResponse": {
+        "properties": {
+          "from_year": {
+            "type": "integer",
+            "title": "From Year"
+          },
+          "to_year": {
+            "type": "integer",
+            "title": "To Year"
+          },
+          "intent": {
+            "type": "string",
+            "title": "Intent"
+          },
+          "summary_statistics": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Summary Statistics"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Limitations"
+          },
+          "results_count": {
+            "type": "integer",
+            "title": "Results Count"
+          },
+          "results": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Results"
+          },
+          "geojson": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GeoJSONFeatureCollection"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "provenance": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Provenance"
+          }
+        },
+        "type": "object",
+        "required": [
+          "from_year",
+          "to_year",
+          "intent",
+          "summary_statistics",
+          "limitations",
+          "results_count",
+          "results",
+          "provenance"
+        ],
+        "title": "TemporalAnalysisResponse"
+      },
+      "TemporalCompareRequest": {
+        "properties": {
+          "from_year": {
+            "type": "integer",
+            "title": "From Year",
+            "default": 2011
+          },
+          "to_year": {
+            "type": "integer",
+            "title": "To Year",
+            "default": 2026
+          },
+          "feature_classes": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Feature Classes"
+          }
+        },
+        "type": "object",
+        "title": "TemporalCompareRequest"
+      },
+      "TemporalProfileRequest": {
+        "properties": {
+          "x": {
+            "type": "number",
+            "title": "X",
+            "description": "X coordinate (UTM Easting or Lon)"
+          },
+          "y": {
+            "type": "number",
+            "title": "Y",
+            "description": "Y coordinate (UTM Northing or Lat)"
+          },
+          "crs": {
+            "type": "string",
+            "title": "Crs",
+            "default": "EPSG:32644"
+          },
+          "band": {
+            "type": "string",
+            "title": "Band",
+            "default": "nir"
+          }
+        },
+        "type": "object",
+        "required": [
+          "x",
+          "y"
+        ],
+        "title": "TemporalProfileRequest"
+      },
+      "TemporalProfileResponse": {
+        "properties": {
+          "band": {
+            "type": "string",
+            "title": "Band"
+          },
+          "x": {
+            "type": "number",
+            "title": "X"
+          },
+          "y": {
+            "type": "number",
+            "title": "Y"
+          },
+          "crs": {
+            "type": "string",
+            "title": "Crs"
+          },
+          "temporal_profile": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Temporal Profile"
+          }
+        },
+        "type": "object",
+        "required": [
+          "band",
+          "x",
+          "y",
+          "crs",
+          "temporal_profile"
+        ],
+        "title": "TemporalProfileResponse"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

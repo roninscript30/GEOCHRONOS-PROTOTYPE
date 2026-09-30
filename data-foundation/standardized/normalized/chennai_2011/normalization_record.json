@@ -1,0 +1,71 @@
+{
+  "observation_id": "chennai_2011",
+  "normalized_at": "2026-09-08T14:24:48.116340+00:00",
+  "source_tif": "data/standardized/chennai_2011/standardized.tif",
+  "output_tif": "data/standardized/normalized/chennai_2011/normalized.tif",
+  "normalization_method": "min_max",
+  "per_band": true,
+  "ignore_nodata": true,
+  "band_parameters": [
+    {
+      "method": "min_max",
+      "min": 8059.0,
+      "max": 19094.0,
+      "band_index": 0,
+      "canonical_name": "blue",
+      "source_dtype": "float32",
+      "output_dtype": "float32",
+      "nodata_value": 0.0
+    },
+    {
+      "method": "min_max",
+      "min": 7927.0,
+      "max": 22421.0,
+      "band_index": 1,
+      "canonical_name": "green",
+      "source_dtype": "float32",
+      "output_dtype": "float32",
+      "nodata_value": 0.0
+    },
+    {
+      "method": "min_max",
+      "min": 7717.0,
+      "max": 23781.0,
+      "band_index": 2,
+      "canonical_name": "red",
+      "source_dtype": "float32",
+      "output_dtype": "float32",
+      "nodata_value": 0.0
+    },
+    {
+      "method": "min_max",
+      "min": 7554.0,
+      "max": 26224.0,
+      "band_index": 3,
+      "canonical_name": "nir",
+      "source_dtype": "float32",
+      "output_dtype": "float32",
+      "nodata_value": 0.0
+    },
+    {
+      "method": "min_max",
+      "min": 7116.0,
+      "max": 57367.0,
+      "band_index": 4,
+      "canonical_name": "swir1",
+      "source_dtype": "float32",
+      "output_dtype": "float32",
+      "nodata_value": 0.0
+    },
+    {
+      "method": "min_max",
+      "min": 7067.0,
+      "max": 56568.0,
+      "band_index": 5,
+      "canonical_name": "swir2",
+      "source_dtype": "float32",
+      "output_dtype": "float32",
+      "nodata_value": 0.0
+    }
+  ]
+}
